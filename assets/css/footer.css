@@ -1,0 +1,33 @@
+.footer {
+	margin-top: 20px;
+	background: -webkit-linear-gradient(#E8E8E8  , white); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#E8E8E8 , white); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#E8E8E8 , white); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#E8E8E8  , white); /* Standard syntax */
+}
+.footer .nav-footer{
+	border-bottom:#ccc solid 1px;
+}
+
+.footer .nav-footer li {
+	float: left;
+	font-size: 12px;
+	border-right:#ccc solid 1px;
+}
+.footer .nav-footer li a {
+	color: #181818;
+}
+.footer p {
+	
+}
+.footer strong {
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 22px;
+	color: #282828;
+}
+.footer strong span{
+	color:#181818;
+}
+.footer .copyright {
+	margin: 20px;
+}

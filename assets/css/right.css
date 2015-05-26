@@ -1,0 +1,19 @@
+.hot_news h4 {
+	line-height: 35px;
+	background-color: #500000;
+	color: #fff;
+}
+.hot_news ul li {
+	padding: 10px 0;
+	overflow: hidden;
+	border-bottom: dotted 1px #ccc;
+}
+.hot_news ul li a{
+	color: #282828;
+	font-size: 16px;
+}
+.hot_news ul li a img{
+	width: 100px;
+	border: 1px solid #ccc;
+	margin-left: 10px;
+}

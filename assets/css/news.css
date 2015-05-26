@@ -1,0 +1,185 @@
+.news-form h2 {
+	color: #5ecdd4;
+}
+.news-form .item {
+	padding: 20px 0;
+	display: block;
+  overflow: hidden;
+}
+.news-form .item a{
+	text-decoration: none;
+}
+.news-form .item img {
+}
+.news-form .item span {
+	color: #d9bb4b;
+}
+.news-form .item h4 {
+	color: #5ecdd4;
+}
+.news-form .item h4:hover {
+	color: #d9bb4b;
+	cursor: pointer;
+}
+.news-form .item p {
+	color: #787878;
+}
+
+.news-form .item .more {
+	padding: 10px 20px;
+	color: #fff;
+	background-image: linear-gradient(to bottom,#30373f,#272d33);
+	box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+	background-repeat:repeat-x;
+}
+
+.news-detail .col-md-12 {
+	margin: 20px 0;
+}
+.news-detail .tab-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.news-detail .glyphicon {
+	margin: 0 10px;
+}
+.news-detail .detail img {
+  max-width: 100%;
+}
+
+/* custom inclusion of right, left and below tabs */
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+  border-top-color: #ddd;
+  border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+
+.share-social {
+  border: 2px solid #700000;
+  padding: 15px;
+  color: #0000CC
+}
+
+.other-news {
+
+}
+.other-news li{ 
+  height: 120px;
+}
+.other-news img{
+  width: 100px;
+  height: 70px;
+  margin-right: 10px;
+}
+.other-news a{
+  font-size: 13px;
+  color: #181818;
+}
+.other-news a:hover{
+  opacity: 0.8
+}
