@@ -23,10 +23,11 @@ class Category extends MX_Controller{
 		$data = array();
 		$data['type'] = $type;
 
-		$category = $this->modelcategory->getCategories(array("type"=>$type));
+		$category = $this->modelcategory->getCategories(array("type"=>$type,"parent"=>-1));
 		if (count($category)>0) {
 			foreach ($category as $key => $value) {
-				# code...
+				$child_category = $this->modelcategory->getCategories(array("type"=>$type,"parent"=>$value['id']));
+				$category[$key]['child'] = $child_category;
 			}
 		}
 		$data['list'] = $category;

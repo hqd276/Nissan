@@ -19,10 +19,10 @@ class Setting extends MX_Controller{
 		$this->template->set_layout('admin');
 	}
 	
-	public function index(){
+	public function index($type = 0){
 		$data = array();
 
-		$setting = $this->modelsetting->getSetting(null);
+		$setting = $this->modelsetting->getSetting(array('type'=>$type));
 		if (count($setting)>0) {
 			foreach ($setting as $key => $value) {
 				# code...

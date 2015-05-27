@@ -1,7 +1,7 @@
 .navbar {
 	margin-bottom: 10px;
 }
-.header ul.nav li.dropdown:hover > ul.dropdown-menu {
+/*.header ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;    
 }
 .header ul.nav{
@@ -20,7 +20,7 @@
   .header ul.nav li {
     width: 100%;
   }
-}
+}*/
 .navbar-brand {
 	padding: 2px 10px;
 }

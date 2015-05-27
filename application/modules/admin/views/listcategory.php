@@ -15,14 +15,28 @@
 			<?php foreach($list as $item) {?>
 			<tr>
 				<td><?php echo $item["id"]?></td>
-				<td><?php echo $item["name"]?></td>
-				<td><?php echo $item["parent"]?></td>
+				<td><strong><?php echo $item["name"]?></strong></td>
+				<td>- Root -</td>
 				<td><?php echo $item["status"]?></td>
 				<td>
 					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/category/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>
 					<a href="<?php echo base_url("/admin/category/edit/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>
 			</tr>
+				<?php if($item['child']){?>
+					<?php foreach($item['child'] as $i) {?>
+					<tr>
+						<td><?php echo $i["id"]?></td>
+						<td> -- <?php echo $i["name"]?></td>
+						<td><?php echo $item["name"]?></td>
+						<td><?php echo $i["status"]?></td>
+						<td>
+							<a href="#" onclick="confirmClick('<?php echo base_url('/admin/category/delete/'.$type.'/'.$i["id"])?>')"  class="btn btn-default"> Delete </a>
+							<a href="<?php echo base_url("/admin/category/edit/".$type."/".$i["id"]);?>" class="btn btn-default"> Edit </a>
+						</td>
+					</tr>
+					<?php }?>
+				<?php }?>
 			<?php }?>
 		<?php }else{?>
 			<tr>

@@ -17,19 +17,6 @@ class Home extends MX_Controller{
 		
 		$this->load->model('admin/modelnews');
 
-		$home_news = $this->modelnews->getNews(array('home_news'=>1,'status'=>1),'LIMIT 0,5','id DESC');
-		$data['home_news_big'] = $home_news[0];
-		unset($home_news[0]);
-		$data['home_news'] = $home_news;
-
-		$new_news = $this->modelnews->getNews(array('status'=>1),'LIMIT 0,8','created DESC');
-		$new_news_img[] = $new_news[0];
-		unset($new_news[0]);
-		$new_news_img[] = $new_news[1];
-		unset($new_news[1]);
-		$data['new_news_img'] = $new_news_img;
-		$data['new_news'] = $new_news;
-
 		$video_news = $this->modelnews->getNews(array('is_video'=>1,'status'=>1),'LIMIT 0,3','id DESC');
 		$data['video_news'] = $video_news;
 

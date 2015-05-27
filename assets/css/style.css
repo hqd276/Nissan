@@ -8,7 +8,7 @@
 }
 
 .banner-hoz {
-	width: 100px;
+	width: 150px;
 	position: absolute;
 	top:100px;
 }
@@ -16,10 +16,10 @@
 	width: 100%;
 }
 .banner-hoz.left {
-	left : -110px;
+	left : -160px;
 }
 .banner-hoz.right {
-	right: -110px;
+	right: -160px;
 }
 a:hover {
 	text-decoration: none;

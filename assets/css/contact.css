@@ -1,3 +1,5 @@
-.form-horizontal  {
-	border-left: 1px solid #ccc;
+@media (min-width: 768px) {
+	.form-horizontal  {
+		border-left: 1px solid #ccc;
+	}
 }

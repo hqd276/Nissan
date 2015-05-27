@@ -29,11 +29,14 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav text-uppercase">
-	        <li class=""><a href="#">Trang chủ <span class="sr-only">(current)</span></a></li>
+	        <li class=""><a href="/">Trang chủ <span class="sr-only">(current)</span></a></li>
 	        <li class="dropdown">
-	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Giới thiệu </a>
+	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Giới thiệu <span class="caret"></span></a>
 	          	<ul class="dropdown-menu" role="menu">
-	            	<li><a href="#">Action</a></li>
+	          		<?php foreach ($abouts as $key => $value) {?>
+	          			<li><a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><?php echo $value['title']?></a></li>
+	          		<?php }?>
+	            	
 	          	</ul>
 	      	</li>
 	        <li class="dropdown">
@@ -60,7 +63,7 @@
 	            	<li><a href="#">Action</a></li>
 	          	</ul>
 	        </li>
-	        <li class="last"><a href="">Liên hệ</a></li>
+	        <li class="last"><a href="<?php echo base_url('contact')?>">Liên hệ</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	</nav>
