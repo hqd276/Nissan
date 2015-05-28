@@ -4,11 +4,11 @@
 <div class="header text-center">
 	<div class="hidden-xs">
 		<div class="col-sm-3 logo">
-			<img src="<?php echo base_url('/assets/images/nissan-logo.png')?>">
+			<a href="/"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
 		</div>
-		<div class="col-sm-6">
-			<h3 class="text-uppercase text-left">Nissan <span>Hà đông</span></h3>
-			<h5 class="text-uppercase">Đại lý 3s chính hãng lớn nhất miền Bắc</h5>
+		<div class="col-sm-6 banner">
+			<img src="<?php echo base_url('/assets/images/banner.png')?>">
+
 			<span class="text-right pull-right">Hotline: 0902.902.555</span>
 		</div>
 	</div>
@@ -36,33 +36,33 @@
 	          		<?php foreach ($abouts as $key => $value) {?>
 	          			<li><a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><?php echo $value['title']?></a></li>
 	          		<?php }?>
-	            	
 	          	</ul>
 	      	</li>
 	        <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sản phẩm </a>
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sản phẩm <span class="caret"></span></a>
 	          	<ul class="dropdown-menu" role="menu">
 	            	<li><a href="#">Action</a></li>
 	          	</ul>
 	        </li>
 	        <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tư vấn mua xe </a>
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tư vấn mua xe <span class="caret"></span></a>
 	          	<ul class="dropdown-menu" role="menu">
-	            	<li><a href="#">Action</a></li>
+	          		<?php foreach ($consult as $key => $value) {?>
+	          			<li><a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><?php echo $value['title']?></a></li>
+	          		<?php }?>
 	          	</ul>
 	        </li>
 	        <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Trả góp </a>
-	          	<ul class="dropdown-menu" role="menu">
-	            	<li><a href="#">Action</a></li>
-	          	</ul>
+	          	<a href="#" role="button" aria-expanded="false">Trả góp </a>
 	        </li>
 	        <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tin tức </a>
+	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tin tức <span class="caret"></span></a>
 	          	<ul class="dropdown-menu" role="menu">
-	            	<li><a href="#">Action</a></li>
+	          		<?php foreach ($cat_news as $key => $value) {?>
+	          			<li><a href="<?php echo base_url().'danh-muc/'.$value['slug']?>"><?php echo $value['name']?></a></li>
+	          		<?php }?>
 	          	</ul>
-	        </li>
+	      	</li>
 	        <li class="last"><a href="<?php echo base_url('contact')?>">Liên hệ</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

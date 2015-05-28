@@ -109,8 +109,8 @@ class News extends MX_Controller {
 		
 		$this->modelnews->updateNewsBy('slug',$slug,array('views'=>$detail_news['views']+1));
 
-		$dataR = Modules::run('right',$detail_news['type']);
-		$this->template->set_partial('right','right',$dataR);
+		// $dataR = Modules::run('right',$detail_news['type']);
+		// $this->template->set_partial('right','right',$dataR);
 
 		$data['title'] = $detail_news['title'] ;
 		$data['other_news'] = $other_news;
