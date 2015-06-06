@@ -31,6 +31,9 @@
 	margin-bottom:-80px;
 	z-index: 100;
 }
+.header .logo img{
+	width: 120px;
+}
 .header .banner {
 	margin-top:20px;
 	margin-bottom: 20px;

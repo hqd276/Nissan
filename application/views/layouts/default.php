@@ -69,7 +69,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="container-fluid">
+<div class="">
   <?php echo $template['partials']['header']; ?>
 
   <div class="middle" >

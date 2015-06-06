@@ -1,7 +1,7 @@
 <!-- <a class="banner-hoz left hidden-xs" href=""><img src="<?php echo base_url('/assets/images/h-banner1.jpg')?>"></a>
 <a class="banner-hoz right hidden-xs" href=""><img src="<?php echo base_url('/assets/images/h-banner2.jpg')?>"></a>
  -->
-<div class="header text-center">
+<div class="header text-center container">
 	<div class="hidden-xs">
 		<div class="col-sm-2 logo">
 			<a href="/"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>

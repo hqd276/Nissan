@@ -1,21 +1,37 @@
 .footer {
 	margin-top: 20px;
-	background: -webkit-linear-gradient(#E8E8E8  , white); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(#E8E8E8 , white); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(#E8E8E8 , white); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(#E8E8E8  , white); /* Standard syntax */
+	background-color: #252525;
+	color: #fff;
+	padding: 0;
+	overflow: hidden;
+}
+.footer ul li,.footer ul li a {
+	color: #727275;
+	font-size: 12px;
 }
 .footer .nav-footer{
-	border-bottom:#ccc solid 1px;
+	background-color: #c71444;
 }
 
 .footer .nav-footer li {
 	float: left;
-	font-size: 12px;
-	border-right:#ccc solid 1px;
 }
 .footer .nav-footer li a {
-	color: #181818;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 14px;
+	color: #fff;
+}
+.footer .nav-footer li a:hover {
+	background-color: transparent;
+} 
+.footer hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.footer h5{
+	color: #c71d2c;
+	margin: 30px 0 10px;
 }
 .footer p {
 	
@@ -30,4 +46,5 @@
 }
 .footer .copyright {
 	margin: 20px;
+	margin-top: 10px;
 }

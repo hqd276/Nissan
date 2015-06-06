@@ -13,17 +13,20 @@
 	margin-top: 10px;
 }
 .content-home .hot-product{
-	border: 1px solid #c0c0c0;
 	padding: 0;
 }
-.content-home .hot-product .top { 
-	line-height: 50px;
+.content-home .top { 
+	line-height: 40px;
 	display: block;
-	background-color: rgba(51,255,51,0.5);
-	color: #181818;
-	font-size: 18px;
+	background-color: #c61633;
+	color: #fff;
+	font-size: 14px;
 	font-weight: 700;
 }
+.content-home .hot-product img {
+	width: 90%;
+}
+
 .content-home .hot-product .pro-title { 
 	line-height: 30px;
 	display: block;
@@ -41,28 +44,79 @@
 .content-home .new-product {
 	padding: 0;
 }
-.content-home .new-product .top {
-	line-height: 40px;
-	display: block;
-	background-color: rgba(51,255,153,0.5);
-	color: #181818;
-	font-size: 16x;
-	font-weight: 700;
+.content-home .new-product ul {
+
+}
+.content-home .new-product ul li {
+	width: 20%;
+	padding: 5px;
+	float: left;
 }
 .content-home .new-product ul li img{
-	width: 100%;
+	width: 90%;
+	margin:10px auto;
 }
 .content-home .new-product .pro-title { 
 	line-height: 25px;
-	display: block;
-	background-color: rgba(224,224,224,0.5);
-	color: #663300;
-	font-weight: 700;
-	font-size: 16px;
+	color: #c41619;
+	font-size: 13px;
+}
+.content-home .new-product .pro-price { 
+	line-height: 25px;
+	color: #000;
+	font-size: 12px;
+}
+.content-home .new-product .pro-tech { 
+	color: #c51756;
+	font-size: 8px;
 }
 
 @media (max-width: 768px) {
   	.carousel-inner .item {
 		/*height: 150px;*/
 	}
+}
+
+.vertical {
+	margin: 20px 0;
+}
+.vertical .carousel-inner {
+  height: 100%;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.6s ease-in-out top;
+     -moz-transition: 0.6s ease-in-out top;
+      -ms-transition: 0.6s ease-in-out top;
+       -o-transition: 0.6s ease-in-out top;
+          transition: 0.6s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 200px;
+}
+
+.carousel.vertical .prev {
+  top: -200px;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -200px;
+}
+
+.carousel.vertical .active.right {
+  top: 200px;
+}
+
+.carousel.vertical .item {
+    left: 0;
 }
