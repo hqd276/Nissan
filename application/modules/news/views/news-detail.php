@@ -4,10 +4,10 @@
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'danh-muc/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
-	<div class="col-md-4">
-		<?php //echo $template['partials']['left']; ?>
+	<div class="col-md-3">
+		<?php echo $template['partials']['left']; ?>
 	</div>
-	<div class="col-md-8 news-detail">
+	<div class="col-md-9 news-detail">
 		<p class="description"><i><strong> <?php echo $item['description']?></strong></i></p>
 		<hr>
 		<?php if($item['image']!=''){?>
@@ -35,7 +35,7 @@
 		<!-- <div class="fb-comments" data-href="<?php echo base_url().'chi-tiet/'.$item['slug']?>" data-width="100%" data-numposts="5" data-colorscheme="light"></div>
 		<hr> -->
 
-		<ul class="list-unstyled other-news">
+		<!-- <ul class="list-unstyled other-news">
 		<?php if (count($other_news)>0) {
 			foreach ($other_news as $key => $value) {?>
 				<li class="col-sm-6">
@@ -48,7 +48,7 @@
 				</li>
 		<?php	}
 		}?>
-		</ul>
+		</ul> -->
 	</div>
 	
 	<div class="clearfix"></div>

@@ -32,7 +32,7 @@ tinymce.init({
 <div class="contact-form col-sm-12 bg-white">
 	<h2 class="text-uppercase">Add new <?php echo $title?></h2>
 	<a href="<?php echo base_url('/admin/product/index/'.$type)?>" class="btn btn-default pull-right"> List <?php echo $title?> </a>
-
+	<a href="<?php echo base_url('/admin/product/add/'.$type)?>" class="btn btn-default pull-right"> Add new <?php echo $title?> </a>
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
 		<div class="form-group">
 			<div>
@@ -42,7 +42,7 @@ tinymce.init({
 						if ($b_Check){
 							echo "<div class='alert alert-success' role='alert'>Add Success</div>";
 						}else{
-							echo "<div class='alert alert-danger' role='alert'>Add Fail</div>";
+							echo "<div class='alert alert-danger' role='alert'>".validation_errors()."</div>";
 						}
 					?>
 				</span>
@@ -71,15 +71,6 @@ tinymce.init({
 				}
 				?>
 			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
-			</div>
-		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Category</label>
-			<div class="col-sm-10">
-				<select class='form-control' name='category_id'>
-					<option value='-1' <?php echo ($item['category_id'] == -1)?'selected':''?> >- Root -</option>
-					<?php echo $category_box;?>
-				</select>
 			</div>
 		</div>
 		<div class="form-group col-sm-12">

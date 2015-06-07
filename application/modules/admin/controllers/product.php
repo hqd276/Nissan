@@ -86,10 +86,6 @@ class Product extends MX_Controller{
 		$this->load->helper(array('form')); 
 		$this->load->helper(array('util')); 
 
-		$this->load->model(array('modelcategory'));
-		$category = $this->modelcategory->getCategories(array("type"=>$type));
-		// $category = add_array_key("id",$category);
-
 		$dataC = array('title' =>'',
 						'slug' =>'',
 						'description' =>'',
@@ -98,7 +94,6 @@ class Product extends MX_Controller{
 						'tag' =>'',
 						'price' =>'',
 						'author' =>'',
-						'category_id' =>'',
 						'created' =>'',
 						'hot_product' =>'',
 						'home_product' =>'',
@@ -109,40 +104,41 @@ class Product extends MX_Controller{
 		if ($this->input->post('submit') == "ok") {
 			$this->load->library(array('form_validation'));
 
-			$this->form_validation->set_rules('title', 'Title', 'required|min_length[5]|is_unique[product.title]'); 
+			$this->form_validation->set_rules('title', 'Title', 'required|is_unique[product.title]'); 
 			$this->form_validation->set_rules('detail', 'Detail', 'required|min_length[5]'); 
 
+			$data['b_Check']= false;
 			#Kiểm tra điều kiện validate 
+			
+			$dataC['title'] = $this->input->post('title'); 
+			$dataC['slug'] = safe_title($this->input->post('title')); 
+			$dataC['description'] = $this->input->post('description'); 
+			$dataC['detail'] = $this->input->post('detail'); 
+			$dataC['info'] = $this->input->post('info'); 
+			$dataC['price'] = $this->input->post('price'); 
+			$dataC['tag'] = $this->input->post('tag'); 
+			$dataC['author'] = $user['id'];
+			$dataC['created'] = time();
+			$dataC['order'] = $this->input->post('order'); 
+
+			if ($this->input->post('hot_product'))
+				$dataC['hot_product'] = 1;
+			else 
+				$dataC['hot_product'] = 0;
+
+			if ($this->input->post('home_product'))
+				$dataC['home_product'] = 1;
+			else 
+				$dataC['home_product'] = 0;
+
+			if ($this->input->post('status'))
+				$dataC['status'] = 1;
+			else 
+				$dataC['status'] = 0;
+
+			$dataC['type'] = $type; 
+
 			if($this->form_validation->run() == TRUE){ 
-				$dataC['title'] = $this->input->post('title'); 
-				$dataC['slug'] = safe_title($this->input->post('title')); 
-				$dataC['description'] = $this->input->post('description'); 
-				$dataC['detail'] = $this->input->post('detail'); 
-				$dataC['info'] = $this->input->post('info'); 
-				$dataC['price'] = $this->input->post('price'); 
-				$dataC['tag'] = $this->input->post('tag'); 
-				$dataC['author'] = $user['id'];
-				$dataC['category_id'] = $this->input->post('category_id'); 
-				$dataC['created'] = time();
-				$dataC['order'] = $this->input->post('order'); 
-
-				if ($this->input->post('hot_product'))
-					$dataC['hot_product'] = 1;
-				else 
-					$dataC['hot_product'] = 0;
-
-				if ($this->input->post('home_product'))
-					$dataC['home_product'] = 1;
-				else 
-					$dataC['home_product'] = 0;
-
-				if ($this->input->post('status'))
-					$dataC['status'] = 1;
-				else 
-					$dataC['status'] = 0;
-
-				$dataC['type'] = $type; 
-
 				if (!empty ($_FILES['image'])) {
 					$this->load->model(array('Mgallery'));
 					$image_data = $this->Mgallery->do_upload("/product/");
@@ -150,16 +146,15 @@ class Product extends MX_Controller{
 						$dataC['image'] = $image_data["file_name"];
 					}
 				}
+
 				if ($this->modelproduct->insertproduct($dataC)){
 					$data['b_Check']= true;
 					// redirect(base_url('list-category/'.$type));
-				}else{
-					$data['b_Check']= false;
 				}
-			} 
+			}
+
 		}
 
-		$data['category_box'] = $this->category_box($category, $dataC);
 
 		$data['item'] = $dataC;
 		$this->template->build('addproduct',$data);
@@ -173,8 +168,6 @@ class Product extends MX_Controller{
 		$data['type'] = $type;
 		$data['title'] = "Edit product";
 
-		$category = $this->modelcategory->getCategories(array("type"=>$type));
-
 		#Tải thư viện và helper của Form trên CodeIgniter 
 		$this->load->helper(array('form')); 
 
@@ -183,40 +176,41 @@ class Product extends MX_Controller{
 		if ($this->input->post('submit') == "ok") {
 			$this->load->library(array('form_validation'));
 
-			$this->form_validation->set_rules('title', 'Title', 'required|min_length[5]'); 
+			$this->form_validation->set_rules('title', 'Title', 'required'); 
 			$this->form_validation->set_rules('detail', 'Detail', 'required|min_length[5]'); 
 
+			$data['b_Check']= false;
 			#Kiểm tra điều kiện validate 
+			
+			$dataC['title'] = $this->input->post('title'); 
+			$dataC['slug'] = safe_title($this->input->post('title')); 
+			$dataC['description'] = $this->input->post('description'); 
+			$dataC['detail'] = $this->input->post('detail'); 
+			$dataC['info'] = $this->input->post('info'); 
+			$dataC['price'] = $this->input->post('price'); 
+			$dataC['tag'] = $this->input->post('tag'); 
+			// $dataC['author'] = $user['id'];
+			// $dataC['created'] = time();
+			$dataC['order'] = $this->input->post('order'); 
+
+			if ($this->input->post('hot_product'))
+				$dataC['hot_product'] = 1;
+			else 
+				$dataC['hot_product'] = 0;
+
+			if ($this->input->post('home_product'))
+				$dataC['home_product'] = 1;
+			else 
+				$dataC['home_product'] = 0;
+
+			if ($this->input->post('status'))
+				$dataC['status'] = 1;
+			else 
+				$dataC['status'] = 0;
+
+			$dataC['type'] = $type; 
+
 			if($this->form_validation->run() == TRUE){ 
-				$dataC['title'] = $this->input->post('title'); 
-				$dataC['slug'] = safe_title($this->input->post('title')); 
-				$dataC['description'] = $this->input->post('description'); 
-				$dataC['detail'] = $this->input->post('detail'); 
-				$dataC['info'] = $this->input->post('info'); 
-				$dataC['price'] = $this->input->post('price'); 
-				$dataC['tag'] = $this->input->post('tag'); 
-				// $dataC['author'] = $user['id'];
-				$dataC['category_id'] = $this->input->post('category_id'); 
-				// $dataC['created'] = time();
-				$dataC['order'] = $this->input->post('order'); 
-
-				if ($this->input->post('hot_product'))
-					$dataC['hot_product'] = 1;
-				else 
-					$dataC['hot_product'] = 0;
-
-				if ($this->input->post('home_product'))
-					$dataC['home_product'] = 1;
-				else 
-					$dataC['home_product'] = 0;
-
-				if ($this->input->post('status'))
-					$dataC['status'] = 1;
-				else 
-					$dataC['status'] = 0;
-
-				$dataC['type'] = $type; 
-
 				if (!empty ($_FILES['image'])) {
 					$this->load->model(array('Mgallery'));
 					$image_data = $this->Mgallery->do_upload("/product/");
@@ -228,12 +222,9 @@ class Product extends MX_Controller{
 				if ($this->modelproduct->updateproduct($id,$dataC)){
 					$data['b_Check']= true;
 					// redirect(base_url('list-category/'.$type));
-				}else{
-					$data['b_Check']= false;
 				}
 			} 
 		}
-		$data['category_box'] = $this->category_box($category, $dataC);
 		$data['item'] = $dataC;
 
 		$this->template->build('addproduct',$data);
@@ -241,27 +232,5 @@ class Product extends MX_Controller{
 	public function delete($id=0){
 		$this->db->delete('product', array('id' => $id)); 
 		redirect(base_url('/admin/product/index/'));
-	}
-
-	function category_box ($category, $dataC) {
-		$category_box = "";
-		foreach ($category as $key => $value) {
-			if ($value["parent"] == -1) {
-				$category_box.= "<option value='".$value['id']."' ";
-				$category_box.= ($dataC['category_id'] == $value['id'])?'selected':'';
-				$category_box.= ">".$value['name']."</option>";
-				// $child = array();
-				foreach ($category as $k => $v) {
-					if ($v["parent"] == $value["id"]){
-						$category_box.= "<option value='".$v['id']."' ";
-						$category_box.= ($dataC['category_id'] == $v['id'])?'selected':'';
-						$category_box.= "> -- ".$v['name']."</option>";
-						// $child[] = $v;
-					}
-				}
-				// $category[$key]["child"]= $child;
-			}
-		}
-		return $category_box;
 	}
 }

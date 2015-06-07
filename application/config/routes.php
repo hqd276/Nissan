@@ -51,6 +51,9 @@ $route['logout'] = "user/logout";
 $route['aboutus'] = "about";
 $route['contact'] = "contact";
 
+$route['tra-gop'] = "about/index/10";
+$route['tuyen-dung'] = "about/index/11";
+
 $route['news'] = "news";
 $route['news/list/(:num)'] = "news/index/$1";
 $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";

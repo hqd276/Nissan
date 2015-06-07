@@ -1,19 +1,23 @@
 <div class="container">
   <div class="footer">
     <ul class="nav nav-footer text-uppercase hidden-xs">
-      <li><a href="">Tín dụng mua xe</a></li>
-      <li><a href="">Sản phẩm khuyến mãi</a></li>
-      <li><a href="">Đăng ký lái thử</a></li>
-      <li><a href="">Tin tức sự kiện</a></li>
-      <li><a href="">Bản đồ Showroom</a></li>
+      <li><a href="<?php echo base_url().'tra-gop'?>">Tín dụng mua xe</a></li>
+      <li><a href="<?php echo base_url().'danh-muc/khuyen-mai'?>">Sản phẩm khuyến mãi</a></li>
+      <li><a href="<?php echo base_url().'dang-ky-lai-thu'?>">Đăng ký lái thử</a></li>
+      <li><a href="<?php echo base_url().'danh-muc/tin-tuc'?>">Tin tức sự kiện</a></li>
+      <li><a href="<?php echo base_url().'ban-do-showroom'?>">Bản đồ Showroom</a></li>
     </ul>
     <div class=" hidden-xs">
       <div class="col-sm-2">
         <h5 class="text-uppercase">Sản phẩm</h5>
         <ul class="list-unstyled">
-          <li>action</li>
-          <li>action</li>
-          <li>action</li>
+          <?php foreach ($products as $key => $value) {?>
+            <li class="">
+              <a href="">
+                <div class="pro-title"><?php echo $value['title']?></div>
+              </a>
+            </li>
+          <?php }?>
         </ul>
       </div>
       <div class="col-sm-2">
@@ -25,31 +29,12 @@
         </ul>
       </div>
       <div class="col-sm-2">
-        <h5 class="text-uppercase">Dịch vụ</h5>
-        <ul class="list-unstyled">
-          <li>action</li>
-          <li>action</li>
-          <li>action</li>
-        </ul>
-      </div>
-      <div class="col-sm-2">
         <h5 class="text-uppercase">Nissan hà đông</h5>
         <ul class="list-unstyled">
-          <li>action</li>
-          <li>action</li>
-          <li>action</li>
+          <?php foreach ($abouts as $key => $value) {?>
+            <li><a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><?php echo $value['title']?></a></li>
+          <?php }?>
         </ul>
-      </div>
-      <div class="col-sm-2">
-        <h5 class="text-uppercase">Công nghệ</h5>
-        <ul class="list-unstyled">
-          <li>action</li>
-          <li>action</li>
-          <li>action</li>
-        </ul>
-      </div>
-      <div class="col-sm-2">
-
       </div>
     </div>
     <div class="clearfix"></div>

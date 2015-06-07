@@ -28,7 +28,6 @@
 	        <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
-	          		<li><a href="<?php echo base_url('admin/category/index/1');?>">Product Category Manager</a></li>
                   	<li><a href="<?php echo base_url('admin/product/index/0');?>">Product Manager</a></li>
                   	<li><a href="<?php echo base_url('admin/product/add/0');?>">Add new Product</a></li>
 	          	</ul>
@@ -54,7 +53,7 @@
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
 	          		<!-- <li><a href="<?php echo base_url();?>admin/support">Supports</a></li>
 	          		<li><a href="<?php echo base_url();?>admin/booking">Booking</a></li> -->
-	          		<li><a href="<?php echo base_url();?>admin/setting/1">Pages</a></li>
+	          		<li><a href="<?php echo base_url();?>admin/page">Pages</a></li>
 	          		<li><a href="<?php echo base_url();?>admin/setting">Settings</a></li>
 	          	</ul>
           	</li>

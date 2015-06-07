@@ -9,12 +9,25 @@ class About extends MX_Controller{
 		$this->template->set_partial('footer','footer',$data);
 	}
 	
-	public function index(){
+	public function index($id = 0 ){
 		$data = array();
 		$data['page'] = 'about';
 		$this->load->model(array('admin/modelsetting'));
-		$about = $this->modelsetting->getSettingByKey('about');
+		switch ($id) {
+			case '10':
+				$key = 'tragop';
+				break;
+			case '11':
+				$key = 'tuyendung';
+				break;
+			
+			default:
+				$key = 'about';
+				break;
+		}
+		$about = $this->modelsetting->getSettingByKey($key);
 		$about['data'] = json_decode($about['value']);
+		// var_dump($about['data']);die;
 		$data['about'] = $about;
 
 		$this->template->build('about',$data);

@@ -60,13 +60,14 @@
 	line-height: 25px;
 	color: #c41619;
 	font-size: 13px;
+	font-weight: bold;
 }
 .content-home .new-product .pro-price { 
 	line-height: 25px;
 	color: #000;
 	font-size: 12px;
 }
-.content-home .new-product .pro-tech { 
+.content-home .new-product p { 
 	color: #c51756;
 	font-size: 8px;
 }

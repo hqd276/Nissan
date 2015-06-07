@@ -8,7 +8,6 @@
 		</p>
 	</div>
 	<form class="form-horizontal  col-sm-8" role="form" method="post" action="<?php echo base_url();?>contact">
-		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
 		<div class="form-group">
 			<div>
 				<span class="success">
@@ -32,15 +31,15 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Phone</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
 			<div class="col-sm-10">
-			  	<input type="" class="form-control" id="inputEmail3" name="phone" placeholder="Phone" value="<?php echo set_value('phone'); ?>">
+			  	<input type="" class="form-control" id="inputEmail3" name="phone" placeholder="Số điện thoại" value="<?php echo set_value('phone'); ?>">
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Content</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Nội dung</label>
 			<div class="col-sm-10">
-				<textarea class="form-control" name="content" placeholder="Content"><?php echo set_value('content'); ?></textarea>
+				<textarea class="form-control" name="content" placeholder="Nội dung"><?php echo set_value('content'); ?></textarea>
 			</div>
 		</div>
 		

@@ -33,7 +33,7 @@ class News extends MX_Controller {
 			$data['cat'] = $category;
 			$list_news = $this->modelnews->getNews(array('category_id'=>$cat),' LIMIT 0,5');
 		}else{
-			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
+			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'','slug'=>'');
 			$list_news = $this->modelnews->getNews(array('type'=>$type),' LIMIT 0,5');
 		}
 
@@ -91,6 +91,8 @@ class News extends MX_Controller {
 		if ($slug == '') 
 			redirect(base_url().'news');
 
+		$this->template->set_partial('left','left');
+
 		$detail_news = $this->modelnews->getNewsBy($slug,'slug');
 		if (!$detail_news)
 			redirect(base_url().'news');
@@ -108,9 +110,6 @@ class News extends MX_Controller {
 		}
 		
 		$this->modelnews->updateNewsBy('slug',$slug,array('views'=>$detail_news['views']+1));
-
-		// $dataR = Modules::run('right',$detail_news['type']);
-		// $this->template->set_partial('right','right',$dataR);
 
 		$data['title'] = $detail_news['title'] ;
 		$data['other_news'] = $other_news;

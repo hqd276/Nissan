@@ -38,11 +38,22 @@
 	          		<?php }?>
 	          	</ul>
 	      	</li>
-	        <li class="dropdown">
+	        <li class="dropdown dropdown-product">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sản phẩm <span class="caret"></span></a>
-	          	<ul class="dropdown-menu" role="menu">
-	            	<li><a href="#">Action</a></li>
-	          	</ul>
+            	<ul class="dropdown-menu list-unstyled text-left list-product-header">
+            		<?php foreach ($products as $key => $value) {?>
+            			<li class="">
+							<a href="">
+								<div class="pro-title"><?php echo $value['title']?></div>
+								<div class="pro-price"><?php echo $value['price']?> VND</div>
+								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
+								<p class="pro-tech">
+									<?php echo $value['description']?>
+								</p>
+							</a>
+						</li>
+            		<?php }?>
+				</ul>
 	        </li>
 	        <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tư vấn mua xe <span class="caret"></span></a>
@@ -53,7 +64,7 @@
 	          	</ul>
 	        </li>
 	        <li class="dropdown">
-	          	<a href="#" role="button" aria-expanded="false">Trả góp </a>
+	          	<a href="<?php echo base_url().'tra-gop'?>" role="button" aria-expanded="false">Trả góp </a>
 	        </li>
 	        <li class="dropdown">
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tin tức <span class="caret"></span></a>

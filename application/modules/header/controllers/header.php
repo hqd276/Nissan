@@ -10,6 +10,8 @@ class Header extends MX_Controller{
 	public function index($page = null){
 		$this->load->model('admin/modelcategory');
 		$this->load->model('admin/modelnews');
+		$this->load->model('admin/modelproduct');
+
 		$data = array();
 		$cat_news = array();
 		$categories = $this->modelcategory->getCategories(array('status'=>1));
@@ -20,6 +22,9 @@ class Header extends MX_Controller{
 		}
 		$data['cat_news'] = $cat_news;
 		$data['categories'] = $categories;
+
+		$products = $this->modelproduct->getProduct();
+		$data['products'] = $products;
 
 		$abouts = $this->modelnews->getNews(array('category_id'=>1)); 
 		$data['abouts'] = $abouts;

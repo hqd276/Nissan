@@ -46,6 +46,7 @@
 }
 .news-detail .detail img {
   max-width: 100%;
+  height: auto;
 }
 
 /* custom inclusion of right, left and below tabs */

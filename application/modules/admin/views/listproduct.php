@@ -28,7 +28,7 @@
 				<td><?php echo $item["status"]?></td>
 				<td>
 					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/product/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>
-					<a href="<?php echo base_url("/admin/product/edit/".$type."/".$item["id"]);?>" class="btn btn-default"> Edit </a>
+					<a href="<?php echo base_url("/admin/product/edit/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>
 			</tr>
 			<?php }?>
