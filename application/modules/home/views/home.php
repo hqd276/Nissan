@@ -3,41 +3,14 @@
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
-	    <div class="item active">
-	      <img src="<?php echo base_url('/assets/images/slider/0.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
+	  	<?php foreach ($banners as $key => $value){?>
+	  	<div class="item <?php echo ($key==0)?"active":"" ?>" >
+	    	<img src="<?php echo base_url("uploads/banner/".$value['image']); ?>">
+	    	<div class="carousel-caption">
+	        	
+	      	</div>
 	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/slider/1.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/slider/2.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/slider/3.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/slider/4.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/slider/5.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/slider/6.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	      </div>
-	    </div>
+	   	<?php } ?>
 	  </div>
 
 	  <!-- Controls -->

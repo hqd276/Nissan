@@ -40,6 +40,8 @@
 	display: block;
 	background-color: rgba(204,102,0,0.5);
 	color: #181818;
+	font-size: 18px;
+	font-weight: bold;
 }
 .content-home .new-product {
 	padding: 0;
@@ -59,17 +61,17 @@
 .content-home .new-product .pro-title { 
 	line-height: 25px;
 	color: #c41619;
-	font-size: 13px;
+	font-size: 18px;
 	font-weight: bold;
 }
 .content-home .new-product .pro-price { 
 	line-height: 25px;
 	color: #000;
-	font-size: 12px;
+	font-size: 16px;
 }
 .content-home .new-product p { 
 	color: #c51756;
-	font-size: 8px;
+	font-size: 10px;
 }
 
 @media (max-width: 768px) {
@@ -82,8 +84,12 @@
 	margin: 20px 0;
 }
 .vertical .carousel-inner {
-  height: 100%;
+  	height: 100%;
 }
+.vertical .carousel-inner img{
+	margin: 30px auto;
+}
+
 
 .carousel.vertical .item {
   -webkit-transition: 0.6s ease-in-out top;
@@ -98,11 +104,11 @@
 }
 
 .carousel.vertical .next {
-  top: 200px;
+  top: 300px;
 }
 
 .carousel.vertical .prev {
-  top: -200px;
+  top: -300px;
 }
 
 .carousel.vertical .next.left,
@@ -111,11 +117,11 @@
 }
 
 .carousel.vertical .active.left {
-  top: -200px;
+  top: -300px;
 }
 
 .carousel.vertical .active.right {
-  top: 200px;
+  top: 300px;
 }
 
 .carousel.vertical .item {

@@ -16,6 +16,7 @@ class Home extends MX_Controller{
 		$data = array();
 		
 		$this->load->model('admin/modelnews');
+		$this->load->model('admin/modelbanner');
 
 		$video_news = $this->modelnews->getNews(array('is_video'=>1,'status'=>1),'LIMIT 0,3','id DESC');
 		$data['video_news'] = $video_news;
@@ -30,6 +31,9 @@ class Home extends MX_Controller{
 				$categories[$key]['list_news'] = array();
 		}
 		$data['categories'] = $categories;
+
+		$banners = $this->modelbanner->getBanner(array('position'=>0));
+		$data['banners'] = $banners;
 
 		$this->template->build('home',$data);
 	}

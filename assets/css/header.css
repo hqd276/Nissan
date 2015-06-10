@@ -79,16 +79,17 @@
 } 
 .list-product-header li .pro-title{
 	color: #c41619;
-	font-size: 13px;
+	font-size: 22px;
 	font-weight: bold;
 }
 .list-product-header li .pro-price{
 	font-weight: bold;
 	color: #000;
+	font-size: 18px;
 }
 .list-product-header li p{
 	text-transform: capitalize;
-	font-size: 10px;
+	/*font-size: 10px;*/
 }
 .list-product-header li img {
 	width: 100%;
