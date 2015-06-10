@@ -72,7 +72,7 @@
 <div class="">
   <?php echo $template['partials']['header']; ?>
 
-  <div class="middle" >
+  <div class="middle container" >
     <?php echo $template['body']; ?>
   </div>
 
