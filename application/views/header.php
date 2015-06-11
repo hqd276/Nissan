@@ -43,13 +43,13 @@
             	<ul class="dropdown-menu list-unstyled text-left list-product-header">
             		<?php foreach ($products as $key => $value) {?>
             			<li class="">
-							<a href="">
+							<a href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								<div class="pro-title"><?php echo $value['title']?></div>
 								<div class="pro-price"><?php echo $value['price']?> VND</div>
 								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
-								<p class="pro-tech">
+								<div class="pro-tech">
 									<?php echo $value['description']?>
-								</p>
+								</div>
 							</a>
 						</li>
             		<?php }?>

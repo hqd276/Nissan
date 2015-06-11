@@ -4,10 +4,7 @@
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'danh-muc/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
-	<div class="col-md-3">
-		<?php echo $template['partials']['left']; ?>
-	</div>
-	<div class="col-md-9 news-detail">
+	<div class="col-md-12 news-detail">
 		<p class="description"><i><strong> <?php echo $item['description']?></strong></i></p>
 		<hr>
 		<?php if($item['image']!=''){?>

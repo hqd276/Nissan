@@ -89,6 +89,7 @@
 }
 .list-product-header li p{
 	text-transform: capitalize;
+	white-space: normal;
 	/*font-size: 10px;*/
 }
 .list-product-header li img {

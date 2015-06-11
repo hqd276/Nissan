@@ -33,9 +33,11 @@
 		            <div class="carousel-inner">
 			            <?php foreach ($products as $key => $value) {?>
 				            <div class="item <?php if($key==0) echo 'active'?>">
-			                    <img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
-			                    <div class="pro-title"><?php echo $value['title']?></div>
-								<!-- <div class="pro-price"><?php echo $value['price']?> VND</div> -->
+				            	<a href="<?php echo base_url('/nissan/'.$value['slug'])?>">
+				            		<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
+				                    <div class="pro-title"><?php echo $value['title']?></div>
+									<!-- <div class="pro-price"><?php echo $value['price']?> VND</div> -->
+				            	</a>
 			                </div>
 	            		<?php }?>
 		            </div>
@@ -49,13 +51,13 @@
 				<ul class="list-unstyled text-left">
 					<?php foreach ($products as $key => $value) {?>
             			<li class="">
-							<a class="pro-img" href="">
+							<a class="pro-img" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
 							</a>
 							
 							<div class="pro-title"><?php echo $value['title']?></div>
 							<div class="pro-price"><?php echo $value['price']?> VND</div>
-							<a class="pull-right view-detail" href="">
+							<a class="pull-right view-detail" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								Chi tiết
 							</a>
 								<!-- <p class="pro-tech">
