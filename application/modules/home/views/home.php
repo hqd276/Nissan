@@ -35,7 +35,7 @@
 				            <div class="item <?php if($key==0) echo 'active'?>">
 			                    <img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
 			                    <div class="pro-title"><?php echo $value['title']?></div>
-								<div class="pro-price"><?php echo $value['price']?> VND</div>
+								<!-- <div class="pro-price"><?php echo $value['price']?> VND</div> -->
 			                </div>
 	            		<?php }?>
 		            </div>
@@ -49,14 +49,19 @@
 				<ul class="list-unstyled text-left">
 					<?php foreach ($products as $key => $value) {?>
             			<li class="">
-							<a href="">
-								<div class="pro-title"><?php echo $value['title']?></div>
-								<div class="pro-price"><?php echo $value['price']?> VND</div>
+							<a class="pro-img" href="">
 								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
-								<p class="pro-tech">
-									<?php echo $value['description']?>
-								</p>
 							</a>
+							
+							<div class="pro-title"><?php echo $value['title']?></div>
+							<div class="pro-price"><?php echo $value['price']?> VND</div>
+							<a class="pull-right view-detail" href="">
+								Chi tiết
+							</a>
+								<!-- <p class="pro-tech">
+									<?php echo $value['description']?>
+								</p> -->
+							
 						</li>
             		<?php }?>
 				</ul>
