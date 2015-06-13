@@ -5,7 +5,7 @@
 	<a href="<?php echo base_url()?>" class="">Home</a> 
 	<hr>
 
-	<div class="news-form col-md-12">
+	<div class="news-form">
 		<?php foreach ($list_product as $key => $value) {?>
 			<div class="item">
 				<div class="col-md-4">

@@ -46,7 +46,7 @@
 		            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
 	            </div>
 			</div>
-			<div class="col-sm-9 new-product">
+			<div class="col-sm-9 new-product hidden-xs">
 				<span class="top text-uppercase"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Sản phẩm mới</span>
 				<ul class="list-unstyled text-left">
 					<?php foreach ($products as $key => $value) {?>

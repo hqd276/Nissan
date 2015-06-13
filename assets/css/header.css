@@ -39,7 +39,7 @@
 	margin-bottom: 20px;
 }
 .header nav {
-	float: right;
+	/*float: right;*/
 
 }
 .header .navbar {
@@ -48,6 +48,12 @@
 .header .navbar-nav{
 	border: 1px solid #ccc;
 	border-right: none;
+}
+@media (max-width: 768px) {
+	.header .navbar-nav {
+		width: 100%;
+		margin: 5px 0;
+	}
 }
 .header .navbar-nav>li {
 	background-color: none;

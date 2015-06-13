@@ -4,7 +4,7 @@
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'danh-muc/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
-	<div class="news-form col-md-12">
+	<div class="news-form">
 		<?php foreach ($list_news as $key => $value) {?>
 			<div class="item">
 				<div class="col-md-4">

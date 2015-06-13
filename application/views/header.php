@@ -28,7 +28,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    <strong>
-	      <ul class="nav navbar-nav text-uppercase">
+	      <ul class="nav navbar-nav text-uppercase pull-right">
 	        <li class=""><a href="/">Trang chủ <span class="sr-only">(current)</span></a></li>
 	        <li class="dropdown">
 	        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Giới thiệu <span class="caret"></span></a>
@@ -38,7 +38,7 @@
 	          		<?php }?>
 	          	</ul>
 	      	</li>
-	        <li class="dropdown dropdown-product">
+	        <li class="dropdown dropdown-product hidden-xs">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sản phẩm <span class="caret"></span></a>
             	<ul class="dropdown-menu list-unstyled text-left list-product-header">
             		<?php foreach ($products as $key => $value) {?>
@@ -50,6 +50,18 @@
 								<div class="pro-tech">
 									<?php echo $value['description']?>
 								</div>
+							</a>
+						</li>
+            		<?php }?>
+				</ul>
+	        </li>
+	        <li class="dropdown visible-xs">
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sản phẩm <span class="caret"></span></a>
+            	<ul class="dropdown-menu">
+            		<?php foreach ($products as $key => $value) {?>
+            			<li class="">
+							<a href="<?php echo base_url('/nissan/'.$value['slug'])?>">
+								<div class="pro-title"><?php echo $value['title']?></div>
 							</a>
 						</li>
             		<?php }?>
