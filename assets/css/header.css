@@ -1,23 +1,14 @@
-/*.header ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;    
-}
-.header ul.nav{
-	float: none;
-}
-.header ul.nav li {
-	width: 14%;
-	border-right: #e7e7e7 solid 1px; 
-	font-size: 12px;
-	overflow: hidden;
-}
-.header ul.nav li.last {
-	border-right:none;
+@media (min-width: 768px) {
+	.header ul.nav li.dropdown:hover > ul.dropdown-menu {
+	    display: block;    
+	}
 }
 @media (max-width: 768px) {
   .header ul.nav li {
     width: 100%;
   }
-}*/
+}
+
 .header {
 	position: relative;
 }
@@ -50,6 +41,10 @@
 .header nav {
 	/*float: right;*/
 
+}
+.header .hotline {
+	color: #AA0001;
+	font-size: 20px;
 }
 .header .navbar {
 	position: static;
