@@ -74,6 +74,11 @@ class Product extends MX_Controller {
 		$detail_product = $this->modelproduct->getProductBy($slug,'slug');
 		if (!$detail_product)
 			redirect(base_url().'product');
+		if ($detail_product['version'] != '') {
+			$detail_product['versions'] = unserialize($detail_product['version']);
+		}else{
+			$detail_product['versions'] = null;
+		}
 
 		$this->modelproduct->updateProductBy('slug',$slug,array('views'=>$detail_product['views']+1));
 

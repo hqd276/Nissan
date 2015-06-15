@@ -9,7 +9,10 @@
 		<div class="col-sm-10 banner">
 			<img class="pull-left" src="<?php echo base_url('/assets/images/banner.png')?>">
 
-			<img class="pull-right" src="<?php echo base_url('/assets/images/hotline.png')?>">
+			<div class="pull-right text-uppercase">
+				<h4>Xuân Kiên - Đại diện kinh doanh</h4>
+				<div class="hotline"><strong> Hotline: 0902.902.555 </strong></div>
+			</div>
 		</div>
 	</div>
 	
@@ -45,7 +48,7 @@
             			<li class="">
 							<a href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								<div class="pro-title"><?php echo $value['title']?></div>
-								<div class="pro-price"><?php echo $value['price']?> VND</div>
+								<div class="pro-price"><?php echo number_format($value['price'])?> VND</div>
 								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
 								<div class="pro-tech">
 									<?php echo $value['description']?>

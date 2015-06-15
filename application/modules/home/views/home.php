@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/home.css">
-<div class=" container">
+<div class="">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
@@ -56,7 +56,7 @@
 							</a>
 							
 							<div class="pro-title"><?php echo $value['title']?></div>
-							<div class="pro-price"><?php echo $value['price']?> VND</div>
+							<div class="pro-price"><?php echo number_format($value['price'])?> VND</div>
 							<a class="pull-right view-detail" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								Chi tiết
 							</a>
