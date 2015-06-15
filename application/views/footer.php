@@ -3,7 +3,7 @@
     <ul class="nav nav-footer text-uppercase hidden-xs">
       <li><a href="<?php echo base_url().'tra-gop'?>">Tín dụng mua xe</a></li>
       <li><a href="<?php echo base_url().'danh-muc/khuyen-mai'?>">Sản phẩm khuyến mãi</a></li>
-      <li><a href="<?php echo base_url().'dang-ky-lai-thu'?>">Đăng ký lái thử</a></li>
+      <!-- <li><a href="<?php echo base_url().'dang-ky-lai-thu'?>">Đăng ký lái thử</a></li> -->
       <li><a href="<?php echo base_url().'danh-muc/tin-tuc'?>">Tin tức sự kiện</a></li>
       <li><a href="<?php echo base_url().'ban-do-showroom'?>">Bản đồ Showroom</a></li>
     </ul>

@@ -9,7 +9,11 @@
 		<div class="col-sm-10 banner">
 			<img class="pull-left" src="<?php echo base_url('/assets/images/banner.png')?>">
 
-			<img class="pull-right" src="<?php echo base_url('/assets/images/hotline.png')?>">
+			<div class="pull-right text-uppercase">
+				<img src="<?php echo base_url('/assets/images/hotline.png')?>">
+				<h4>Đại diện kinh doanh</h4>
+				<h3><strong>Nguyễn Xuân Kiên</strong></h3>
+			</div>
 		</div>
 	</div>
 	

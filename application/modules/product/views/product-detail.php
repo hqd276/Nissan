@@ -1,7 +1,11 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/product.css">
 <div class="row">
 	<div class="bg-white col-sm-10 col-sm-offset-1 product-detail">
-		<h3 class="text-uppercase"><strong><?php echo $item['title']?></strong> </h3>
+		<h1 class="text-uppercase"><strong><?php echo $item['title']?></strong> </h1>
+		<p class="product-price">
+			GIÁ BÁN LẺ ĐỀ XUẤT (ĐÃ BAO GỒM 10% VAT)<br>
+			<span><?php echo $item['price']?></span> VND
+		</p>
 		<hr>
 
 		<div class="">
