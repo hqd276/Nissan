@@ -10,8 +10,14 @@
 			<img class="pull-left" src="<?php echo base_url('/assets/images/banner.png')?>">
 
 			<div class="pull-right text-uppercase">
+<<<<<<< HEAD
 				<h4>Xuân Kiên - Đại diện kinh doanh</h4>
 				<div class="hotline"><strong> Hotline: 0902.902.555 </strong></div>
+=======
+				<img src="<?php echo base_url('/assets/images/hotline.png')?>">
+				<h4>Đại diện kinh doanh</h4>
+				<h3><strong>Nguyễn Xuân Kiên</strong></h3>
+>>>>>>> origin/master
 			</div>
 		</div>
 	</div>
