@@ -1,18 +1,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/product.css">
 <div class="row">
-<<<<<<< HEAD
 	<div class="bg-white col-sm-12 product-detail">
 		<h1 class="text-uppercase"><strong><?php echo $item['title']?></strong> </h1>
 		<p class="product-price">
 			GIÁ BÁN LẺ ĐỀ XUẤT (ĐÃ BAO GỒM 10% VAT)<br>
 			<span><?php echo number_format($item['price'])?></span> VND
-=======
-	<div class="bg-white col-sm-10 col-sm-offset-1 product-detail">
-		<h1 class="text-uppercase"><strong><?php echo $item['title']?></strong> </h1>
-		<p class="product-price">
-			GIÁ BÁN LẺ ĐỀ XUẤT (ĐÃ BAO GỒM 10% VAT)<br>
-			<span><?php echo $item['price']?></span> VND
->>>>>>> origin/master
 		</p>
 		<hr>
 		<img class="img-responsive col-sm-8 col-sm-offset-2" src="<?php echo base_url().'uploads/product/'.$item['image']?>">		
