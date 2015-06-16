@@ -90,7 +90,6 @@ class Product extends MX_Controller{
 						'slug' =>'',
 						'description' =>'',
 						'detail' =>'',
-						'info' =>'',
 						'tag' =>'',
 						'price' =>'',
 						'author' =>'',
@@ -114,7 +113,6 @@ class Product extends MX_Controller{
 			$dataC['slug'] = safe_title($this->input->post('title')); 
 			$dataC['description'] = $this->input->post('description'); 
 			$dataC['detail'] = $this->input->post('detail'); 
-			$dataC['info'] = $this->input->post('info'); 
 			$dataC['price'] = $this->input->post('price'); 
 			$dataC['tag'] = $this->input->post('tag'); 
 			$dataC['author'] = $user['id'];
@@ -186,7 +184,6 @@ class Product extends MX_Controller{
 			$dataC['slug'] = safe_title($this->input->post('title')); 
 			$dataC['description'] = $this->input->post('description'); 
 			$dataC['detail'] = $this->input->post('detail'); 
-			$dataC['info'] = $this->input->post('info'); 
 			$dataC['price'] = $this->input->post('price'); 
 			$dataC['tag'] = $this->input->post('tag'); 
 			// $dataC['author'] = $user['id'];
@@ -221,10 +218,31 @@ class Product extends MX_Controller{
 
 				if ($this->modelproduct->updateproduct($id,$dataC)){
 					$data['b_Check']= true;
-					// redirect(base_url('list-category/'.$type));
 				}
 			} 
+		}elseif($this->input->post('submit') == "ok_version"){
+			$titles = $this->input->post('titles'); 
+			$prices = $this->input->post('prices'); 
+			$details = $this->input->post('details'); 
+			$version = array();
+			foreach ($titles as $k => $v) {
+				if ($v != '')
+					$version[] = array('title'=>$titles[$k],'price'=>$prices[$k],'detail'=>$details[$k]);	
+			}
+
+			$dataC['version'] = serialize($version);
+
+			if ($this->modelproduct->updateproduct($id,$dataC)){
+				$data['b_Check']= true;
+			}
 		}
+
+		if ($dataC['version']!='') {
+			$dataC['versions'] = unserialize($dataC['version']);
+		}else{
+			$dataC['versions'] = null;
+		}
+
 		$data['item'] = $dataC;
 
 		$this->template->build('addproduct',$data);

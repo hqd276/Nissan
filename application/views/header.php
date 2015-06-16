@@ -48,7 +48,7 @@
             			<li class="">
 							<a href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								<div class="pro-title"><?php echo $value['title']?></div>
-								<div class="pro-price"><?php echo $value['price']?> VND</div>
+								<div class="pro-price"><?php echo number_format($value['price'])?> VND</div>
 								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
 								<div class="pro-tech">
 									<?php echo $value['description']?>

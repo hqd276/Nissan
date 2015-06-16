@@ -23,6 +23,54 @@
 .product-detail .glyphicon {
 	margin: 0 10px;
 }
+.product-detail h1 {
+  font-size: 80px;
+  line-height: 80px;
+  color: #141414;
+  font-weight: 800;
+}
+.product-detail .product-price {
+  color: #888;
+  font-size: 12px;
+}
+.product-detail .product-price span {
+  color: #e5003d;
+  font-size: 34px;
+}
+.product-detail .section-title {
+  color: #414141;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #C1C1C1;
+  font-weight: 800;
+  line-height: 45px;
+}
+.product-detail .version {
+  background-color: #eee;
+  padding: 10px 30px 30px;
+}
+.product-detail .title-v {
+  color: #343434;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 30px;
+}
+.product-detail .price-v {
+  color: #c60c3e;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+.product-detail .price-v span{
+  font-size: 10px;
+}
+.product-detail .detail-v {
+  border-top: 1px solid #CBCBCB;
+  padding-top: 5px;
+  min-height: 186px;
+  font-size: 14px;
+}
 .product-detail .detail img {
   max-width: 100%;
   height: auto;
