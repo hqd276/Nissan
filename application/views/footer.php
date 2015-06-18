@@ -39,13 +39,13 @@
     </div>
     <div class="clearfix"></div>
     <hr>
-    <span class="pull-right copyright">&copy; - Copyright by Nissan Hà Đông - Design by HD</span>
+    <span class="pull-right copyright">&copy; 2015 Nissan Vietnam Co., Ltd | Site by HD </span>
   </div>
 </div>
 
 <script lang="javascript">
 (function() {var _h1= document.getElementsByTagName('title')[0] || false;
 var product_name = ''; if(_h1){product_name= _h1.textContent || _h1.innerText;}var ga = document.createElement('script'); ga.type = 'text/javascript';
-ga.src = '//live.vnpgroup.net/js/web_client_box.php?hash=8b6795991207eb86f9070b66eeccfc12&data=eyJzc29faWQiOjU1OTI3NCwiaGFzaCI6IjM1YTA0YmE5NjZhZWZlYTI2NzFmODMwYTJmMWY2ZWFlIn0-&pname='+product_name;
+ga.src = '//live.vnpgroup.net/js/web_client_box.php?hash=e80635808b46d828312d1feb96974f45&data=eyJzc29faWQiOjk2NzU0MywiaGFzaCI6IjE4NTU4M2VhM2JlNWQ2YjgwMGI0MzA1MTY0OGQyMThiIn0-&pname='+product_name;
 var s = document.getElementsByTagName('script');s[0].parentNode.insertBefore(ga, s[0]);})();
 </script> 
