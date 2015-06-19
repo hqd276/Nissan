@@ -55,4 +55,37 @@ class Mgallery extends CI_Model{
         }
         return $images;
     }
+
+    //hàm thực hiện công việc upload và resize lại nhiều hình ảnh 1 lúc
+    public function do_upload_multi($type,$multi_img){
+        $this->_gallery_url.=$type;
+        $this->_gallery_path.=$type;
+
+        $config = array('upload_path'   => $this->_gallery_path,
+                        'allowed_types' => 'gif|jpg|png',
+                        'max_size'      => '4096');
+
+        $this->load->library("upload",$config);
+        if(!$this->upload->do_multi_upload($multi_img)){
+            $error = array($this->upload->display_errors());
+            var_dump($error);die;
+            return false;
+        }else{
+            $image_data = $this->upload->get_multi_upload_data();    
+        }
+        var_dump($image_data);die;
+        //kết thúc công đoạn upload hình ảnh
+        foreach ($image_data as $key => $value) {
+            $config = array("source_image" => $value['full_path'],
+                            "new_image" => $this->_gallery_path . "thumbs",
+                            "maintain_ration" => true,
+                            "width" => '320',
+                            "height" => "250");
+            $this->load->library("image_lib",$config);
+            $this->image_lib->resize();
+            //kết thúc công đoạn resize lại hình ảnh 
+        }
+
+        return $image_data;
+    }
 }

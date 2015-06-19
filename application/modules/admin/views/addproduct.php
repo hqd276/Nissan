@@ -1,49 +1,5 @@
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
-
-// tinymce.init({
-//     theme_advanced_fonts : "Andale Mono=andale mono,times;"+
-//             "Arial=arial,helvetica,sans-serif;"+
-//             "Arial Black=arial black,avant garde;"+
-//             "Book Antiqua=book antiqua,palatino;"+
-//             "Comic Sans MS=comic sans ms,sans-serif;"+
-//             "Courier New=courier new,courier;"+
-//             "Georgia=georgia,palatino;"+
-//             "Helvetica=helvetica;"+
-//             "Impact=impact,chicago;"+
-//             "Symbol=symbol;"+
-//             "Tahoma=tahoma,arial,helvetica,sans-serif;"+
-//             "Terminal=terminal,monaco;"+
-//             "Times New Roman=times new roman,times;"+
-//             "Trebuchet MS=trebuchet ms,geneva;"+
-//             "Verdana=verdana,geneva;"+
-//             "Webdings=webdings;"+
-//             "Wingdings=wingdings,zapf dingbats",
-//     fontsize_formats: "8pt 9pt 10pt 11pt 12pt 14pt 26pt 36pt",
-//     selector: "textarea",
-//     theme: "modern",
-//     skin: 'light',
-//     height: 300,
-//     plugins: [
-//         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
-//         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
-//         "save table contextmenu directionality emoticons template paste textcolor jbimages"
-//     ],
-//     //content_css: "css/content.css",
-//     toolbar: "insertfile undo redo | styleselect | fontsizeselect | fontselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
-//     toolbar_items_size: 'small',
-//     menubar: false,
-//     style_formats: [
-//         {title: 'Bold text', inline: 'b'},
-//         {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
-//         {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
-//         {title: 'Example 1', inline: 'span', classes: 'example1'},
-//         {title: 'Example 2', inline: 'span', classes: 'example2'},
-//         {title: 'Table styles'},
-//         {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
-//     ]
-// });
-
 tinymce.init({
     selector: "textarea",
     height:"300",
@@ -237,7 +193,23 @@ tinymce.init({
 				</div>
 			</div>
 			<div id="furniture" class="tab-pane" >
-				F
+				<div class="form-group col-sm-12 furniture core hidden">
+					<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+					<div class="col-sm-10">
+					  	<input type="file" class="form-control" id="inputEmail3" name="furniture[]" placeholder="Image">
+					</div>
+				</div>
+
+				<div class="form-group col-sm-12">
+					<div class="col-sm-10">
+						<span class="btn btn-default add-more-furniture">Add more furniture</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+					  <button type="submit" class="btn btn-default" value="ok_furniture" name="submit">Send</button>
+					</div>
+				</div>
 			</div>
 			<div id="exterior" class="tab-pane" >
 				E
@@ -267,6 +239,9 @@ tinymce.init({
 		}else{
 			$('.version.core').clone().removeClass('core').removeClass('hidden').insertAfter('.version:last');
 		}
+	});
+	$('.add-more-furniture').click(function(){
+		$('.furniture.core').clone().removeClass('core').removeClass('hidden').insertAfter('.furniture:last');
 	});
 </script>
 		

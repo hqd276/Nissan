@@ -235,6 +235,23 @@ class Product extends MX_Controller{
 			if ($this->modelproduct->updateproduct($id,$dataC)){
 				$data['b_Check']= true;
 			}
+		}elseif($this->input->post('submit') == "ok_furniture"){
+			if (!empty ($_FILES['furniture'])) {
+					$this->load->model(array('Mgallery'));
+					$image_data = $this->Mgallery->do_upload_multi("/product-furniture/","furniture");
+					if ($image_data) {
+						$furniture_img = array(); 
+						foreach ($image_data as $key => $value) {
+							$furniture_img[] = $value["file_name"];
+						}
+						$dataC['furniture'] = serialize($furniture_img);
+					}
+
+					if ($this->modelproduct->updateproduct($id,$dataC)){
+						$data['b_Check']= true;
+					}
+				}
+
 		}
 
 		if ($dataC['version']!='') {
