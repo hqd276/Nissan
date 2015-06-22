@@ -72,13 +72,28 @@ class Product extends MX_Controller {
 			redirect(base_url().'product');
 
 		$detail_product = $this->modelproduct->getProductBy($slug,'slug');
+
 		if (!$detail_product)
 			redirect(base_url().'product');
+		
 		if ($detail_product['version'] != '') {
 			$detail_product['versions'] = unserialize($detail_product['version']);
 		}else{
 			$detail_product['versions'] = null;
 		}
+
+		if ($detail_product['furniture']!='') {
+			$detail_product['furnitures'] = unserialize($detail_product['furniture']);
+		}else{
+			$detail_product['furnitures'] = null;
+		}
+		
+		if ($detail_product['exterior']!='') {
+			$detail_product['exteriors'] = unserialize($detail_product['exterior']);
+		}else{
+			$detail_product['exteriors'] = null;
+		}
+
 
 		$this->modelproduct->updateProductBy('slug',$slug,array('views'=>$detail_product['views']+1));
 

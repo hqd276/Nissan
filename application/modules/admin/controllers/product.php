@@ -118,6 +118,7 @@ class Product extends MX_Controller{
 			$dataC['author'] = $user['id'];
 			$dataC['created'] = time();
 			$dataC['order'] = $this->input->post('order'); 
+			$dataC['video'] = $this->input->post('video'); 
 
 			if ($this->input->post('hot_product'))
 				$dataC['hot_product'] = 1;
@@ -186,9 +187,8 @@ class Product extends MX_Controller{
 			$dataC['detail'] = $this->input->post('detail'); 
 			$dataC['price'] = $this->input->post('price'); 
 			$dataC['tag'] = $this->input->post('tag'); 
-			// $dataC['author'] = $user['id'];
-			// $dataC['created'] = time();
 			$dataC['order'] = $this->input->post('order'); 
+			$dataC['video'] = $this->input->post('video'); 
 
 			if ($this->input->post('hot_product'))
 				$dataC['hot_product'] = 1;
@@ -236,21 +236,34 @@ class Product extends MX_Controller{
 				$data['b_Check']= true;
 			}
 		}elseif($this->input->post('submit') == "ok_furniture"){
-			if (!empty ($_FILES['furniture'])) {
-					$this->load->model(array('Mgallery'));
-					$image_data = $this->Mgallery->do_upload_multi("/product-furniture/","furniture");
-					if ($image_data) {
-						$furniture_img = array(); 
-						foreach ($image_data as $key => $value) {
-							$furniture_img[] = $value["file_name"];
-						}
-						$dataC['furniture'] = serialize($furniture_img);
-					}
-
-					if ($this->modelproduct->updateproduct($id,$dataC)){
-						$data['b_Check']= true;
-					}
+			$this->load->model(array('Mgallery'));
+			$image_data = $this->Mgallery->do_upload_multi("/product-furniture/","furniture");
+			if ($image_data) {
+				$furniture_img = array(); 
+				foreach ($image_data as $key => $value) {
+					$furniture_img[] = $value["file_name"];
 				}
+				$dataC['furniture'] = serialize($furniture_img);
+			}
+
+			if ($this->modelproduct->updateproduct($id,$dataC)){
+				$data['b_Check']= true;
+			}
+
+		}elseif($this->input->post('submit') == "ok_exterior"){
+			$this->load->model(array('Mgallery'));
+			$image_data = $this->Mgallery->do_upload_multi("/product-exterior/","exterior");
+			if ($image_data) {
+				$exterior_img = array(); 
+				foreach ($image_data as $key => $value) {
+					$exterior_img[] = $value["file_name"];
+				}
+				$dataC['exterior'] = serialize($exterior_img);
+			}
+
+			if ($this->modelproduct->updateproduct($id,$dataC)){
+				$data['b_Check']= true;
+			}
 
 		}
 
@@ -258,6 +271,18 @@ class Product extends MX_Controller{
 			$dataC['versions'] = unserialize($dataC['version']);
 		}else{
 			$dataC['versions'] = null;
+		}
+
+		if ($dataC['furniture']!='') {
+			$dataC['furnitures'] = unserialize($dataC['furniture']);
+		}else{
+			$dataC['furnitures'] = null;
+		}
+
+		if ($dataC['exterior']!='') {
+			$dataC['exteriors'] = unserialize($dataC['exterior']);
+		}else{
+			$dataC['exteriors'] = null;
 		}
 
 		$data['item'] = $dataC;

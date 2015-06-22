@@ -12,6 +12,9 @@
 <meta property="og:url" content="<?php echo base_url().'chi-tiet/'.$item['slug']?>" />
 <meta property="og:image" content="<?php echo base_url().'uploads/news/'.$item['image']?>" />
 <?php }?>
+
+<link rel="icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/gif" sizes="48x48">
+
 <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
 <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 

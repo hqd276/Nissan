@@ -100,6 +100,13 @@ tinymce.init({
 					</div>
 				</div>
 				<div class="form-group col-sm-12">
+					<label for="inputEmail3" class="col-sm-2 control-label">Video</label>
+					<div class="col-sm-10">
+					  	<input type="" class="form-control" id="inputEmail3" name="video" placeholder="Video" value="<?php echo $item['video']; ?>">
+					  	Chỉ điền phần in đậm: https://www.youtube.com/watch?v=<strong>vsknwG6Q7VY</strong>
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
 					<label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
 					<div class="col-sm-10">
 					  	<input type="" class="form-control" id="inputEmail3" name="tag" placeholder="Tag" value="<?php echo $item['tag']; ?>">
@@ -193,6 +200,13 @@ tinymce.init({
 				</div>
 			</div>
 			<div id="furniture" class="tab-pane" >
+				<?php if($item['furnitures']){
+					foreach ($item['furnitures'] as $k => $v) { ?>
+					<div class="col-sm-3"> 
+						<img style="width:100%" src="<?php echo base_url("uploads/product-furniture/".$v); ?>">
+					</div>
+				<?php }
+				}?>
 				<div class="form-group col-sm-12 furniture core hidden">
 					<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 					<div class="col-sm-10">
@@ -212,7 +226,30 @@ tinymce.init({
 				</div>
 			</div>
 			<div id="exterior" class="tab-pane" >
-				E
+				<?php if($item['exteriors']){
+					foreach ($item['exteriors'] as $k => $v) { ?>
+					<div class="col-sm-3"> 
+						<img style="width:100%" src="<?php echo base_url("uploads/product-exterior/".$v); ?>">
+					</div>
+				<?php }
+				}?>
+				<div class="form-group col-sm-12 exterior core hidden">
+					<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+					<div class="col-sm-10">
+					  	<input type="file" class="form-control" id="inputEmail3" name="exterior[]" placeholder="Image">
+					</div>
+				</div>
+
+				<div class="form-group col-sm-12">
+					<div class="col-sm-10">
+						<span class="btn btn-default add-more-exterior">Add more exterior</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+					  <button type="submit" class="btn btn-default" value="ok_exterior" name="submit">Send</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</form>
@@ -242,6 +279,9 @@ tinymce.init({
 	});
 	$('.add-more-furniture').click(function(){
 		$('.furniture.core').clone().removeClass('core').removeClass('hidden').insertAfter('.furniture:last');
+	});
+	$('.add-more-exterior').click(function(){
+		$('.exterior.core').clone().removeClass('core').removeClass('hidden').insertAfter('.exterior:last');
 	});
 </script>
 		

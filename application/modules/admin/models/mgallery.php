@@ -68,12 +68,10 @@ class Mgallery extends CI_Model{
         $this->load->library("upload",$config);
         if(!$this->upload->do_multi_upload($multi_img)){
             $error = array($this->upload->display_errors());
-            var_dump($error);die;
             return false;
         }else{
             $image_data = $this->upload->get_multi_upload_data();    
         }
-        var_dump($image_data);die;
         //kết thúc công đoạn upload hình ảnh
         foreach ($image_data as $key => $value) {
             $config = array("source_image" => $value['full_path'],
