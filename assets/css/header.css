@@ -16,7 +16,8 @@
 	padding: 2px 10px;
 }
 .navbar-brand img {
-	height: 46px;
+    height: 55px;
+    margin-top: 5px;
 }
 .header .logo {
 	margin-bottom:-80px;
@@ -50,7 +51,7 @@
 	position: static;
 }
 .header .navbar-nav{
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 	border-right: none;
 }
 @media (max-width: 768px) {
@@ -61,7 +62,7 @@
 }
 .header .navbar-nav>li {
 	background-color: none;
-	border-right: 1px solid #ccc;
+	/*border-right: 1px solid #ccc;*/
 } 
 .header .navbar-default {
 	background-color: transparent;
@@ -69,15 +70,23 @@
 	margin-bottom: 0;
 }
 .header .nav li a {
-	padding:10px;
-	font-size: 12px;
+	font-size: 14px;
+	color: #3f3f3f;
+}
+
+.navbar-header {
+	height: 70px;
+}
+.navbar-toggle {
+	margin-top: 15px;
+	margin-left: 15px;
 }
 .dropdown-product {
 	position: inherit !important;
 }
 .list-product-header {
+	top: 134px;
 	width: 100%;
-	left: 15px;
 	padding: 5px;
 }
 .list-product-header li {

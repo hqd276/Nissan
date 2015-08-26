@@ -42,8 +42,14 @@
 	            		<?php }?>
 		            </div>
 		            <!-- Carousel nav -->
-		            <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
-		            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+		            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+				 	</a>
+				  	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+				 	 </a>
 	            </div>
 			</div>
 			<div class="col-sm-9 new-product hidden-xs">
