@@ -1,7 +1,7 @@
 <!-- <a class="banner-hoz left hidden-xs" href=""><img src="<?php echo base_url('/assets/images/h-banner1.jpg')?>"></a>
 <a class="banner-hoz right hidden-xs" href=""><img src="<?php echo base_url('/assets/images/h-banner2.jpg')?>"></a>
  -->
-<div class="header text-center container">
+<div class="header text-center container navbar-fixed-top">
 	<div class="hidden-xs">
 		<div class="col-sm-2 logo">
 			<a href="/"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	
-	<nav id="navbar" class="navbar navbar-default">
+	<nav id="navbar" class="navbar navbar-default ">
 		<div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -104,95 +104,95 @@
 </div>
 
 <script type="text/javascript">
-var windowScrollTop = function () {
-    return window.pageYOffset;
-};
+// var windowScrollTop = function () {
+//     return window.pageYOffset;
+// };
 
-var Menu = (function (scrollOffset) {
-    var Menu = function () {
-        this.element = document.getElementById('navbar');
-        this.docked = false;
-        this.initialOffsetTop = 0;
+// var Menu = (function (scrollOffset) {
+//     var Menu = function () {
+//         this.element = document.getElementById('navbar');
+//         this.docked = false;
+//         this.initialOffsetTop = 0;
 
-        this.resetInitialOffsetTop();
-    }
+//         this.resetInitialOffsetTop();
+//     }
 
-    Menu.prototype = {
-        offsetTop: function () {
-            return this.element.offsetTop;
-        },
-        resetInitialOffsetTop: function () {
-            this.initialOffsetTop = this.offsetTop();
-        },
+//     Menu.prototype = {
+//         offsetTop: function () {
+//             return this.element.offsetTop;
+//         },
+//         resetInitialOffsetTop: function () {
+//             this.initialOffsetTop = this.offsetTop();
+//         },
 
-        dock: function () {
-            this.element.className = 'docked';
-            this.docked = true;
-        },
-        undock: function () {
-            this.element.className = this.element.className.replace('docked', '');
-            this.docked = false;
-        },
+//         dock: function () {
+//             this.element.className = 'docked';
+//             this.docked = true;
+//         },
+//         undock: function () {
+//             this.element.className = this.element.className.replace('docked', '');
+//             this.docked = false;
+//         },
 
-        toggleDock: function () {
-            if (this.docked === false && (this.offsetTop() - scrollOffset() < 0)) {
-                this.dock();
-            } else if (this.docked === true && (scrollOffset() <= this.initialOffsetTop)) {
-                this.undock();
-            }
-        }
-    };
+//         toggleDock: function () {
+//             if (this.docked === false && (this.offsetTop() - scrollOffset() < 0)) {
+//                 this.dock();
+//             } else if (this.docked === true && (scrollOffset() <= this.initialOffsetTop)) {
+//                 this.undock();
+//             }
+//         }
+//     };
 
-    return Menu;
-})(windowScrollTop);
-
-
-var menu = new Menu();
+//     return Menu;
+// })(windowScrollTop);
 
 
-window.onscroll = function () {
-    menu.toggleDock();
-};
+// var menu = new Menu();
 
-var updateMenuTop = function () {
-    // Shortly dock to reset the initial Y-offset
-    menu.undock();
-    menu.resetInitialOffsetTop();
 
-    // If appropriate, undock again based on the new value
-    menu.toggleDock();
-};
+// window.onscroll = function () {
+//     menu.toggleDock();
+// };
 
-var zoomListeners = [updateMenuTop];
+// var updateMenuTop = function () {
+//     // Shortly dock to reset the initial Y-offset
+//     menu.undock();
+//     menu.resetInitialOffsetTop();
 
-(function () {
-    var w = window,
-        d = document,
-        e = d.documentElement,
-        g = d.getElementsByTagName('body')[0];
+//     // If appropriate, undock again based on the new value
+//     menu.toggleDock();
+// };
 
-    var lastWidth = 0;
+// var zoomListeners = [updateMenuTop];
 
-    function pollZoomFireEvent() {
-        var widthNow = w.innerWidth || e.clientWidth || g.clientWidth;
+// (function () {
+//     var w = window,
+//         d = document,
+//         e = d.documentElement,
+//         g = d.getElementsByTagName('body')[0];
 
-        if (lastWidth == widthNow) {
-            return;
-        }
+//     var lastWidth = 0;
 
-        lastWidth = widthNow;
+//     function pollZoomFireEvent() {
+//         var widthNow = w.innerWidth || e.clientWidth || g.clientWidth;
 
-        // Length changed, user must have zoomed, invoke listeners.
-        for (i = zoomListeners.length - 1; i >= 0; --i) {
-            zoomListeners[i]();
-        }
-    }
+//         if (lastWidth == widthNow) {
+//             return;
+//         }
 
-    setInterval(pollZoomFireEvent, 100);
-})();
+//         lastWidth = widthNow;
+
+//         // Length changed, user must have zoomed, invoke listeners.
+//         for (i = zoomListeners.length - 1; i >= 0; --i) {
+//             zoomListeners[i]();
+//         }
+//     }
+
+//     setInterval(pollZoomFireEvent, 100);
+// })();
 </script>
 <style type="text/css">
-#navbar.docked .nav{
+/*#navbar.docked .nav{
 	margin: 0 auto;
 }
 #navbar.docked {
@@ -211,5 +211,5 @@ var zoomListeners = [updateMenuTop];
 }
 #navbar.docked .navbar-header {
 	height: auto;
-}
+}*/
 </style>

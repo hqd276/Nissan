@@ -6,8 +6,8 @@
 body {
 	font-family: Roboto;
 }
-.container {
-	position: relative;
+.middle {
+	margin-top: 145px;
 }
 
 .banner-hoz {
