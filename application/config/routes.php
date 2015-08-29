@@ -60,6 +60,9 @@ $route['news'] = "news";
 $route['news/list/(:num)'] = "news/index/$1";
 $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
 
+$route['du-toan-chi-phi'] = "estimates";
+$route['dang-ki-lai-thu'] = "testdriver";
+
 $route['nissan'] = "product";
 $route['nissan/(:any)'] = "product/detail_t/$1";
 

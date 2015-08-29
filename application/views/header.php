@@ -81,6 +81,9 @@
 		          		<?php foreach ($consult as $key => $value) {?>
 		          			<li><a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><?php echo $value['title']?></a></li>
 		          		<?php }?>
+		          		<li><a href="<?php echo base_url('du-toan-chi-phi')?>">Dự toán chi phí</a></li>
+		          		<li><a href="<?php echo base_url('dang-ki-lai-thu')?>">Đăng kí lái thử</a></li>
+		          		<li><a href="<?php echo base_url('ban-do-showroom')?>">Tìm đường đi</a></li>
 		          	</ul>
 		        </li>
 		        <li class="dropdown">
