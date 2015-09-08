@@ -38,6 +38,9 @@
 				                    <div class="pro-title"><?php echo $value['title']?></div>
 									<!-- <div class="pro-price"><?php echo $value['price']?> VND</div> -->
 				            	</a>
+				            	<a class="view-detail visible-xs" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
+									Chi tiết
+								</a>
 			                </div>
 	            		<?php }?>
 		            </div>
@@ -54,7 +57,7 @@
 			</div>
 			<div class="col-sm-9 new-product hidden-xs">
 				<span class="top text-uppercase"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Sản phẩm mới</span>
-				<ul class="list-unstyled text-left">
+				<ul class="list-unstyled text-center">
 					<?php foreach ($products as $key => $value) {?>
             			<li class="">
 							<a class="pro-img" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
@@ -63,7 +66,7 @@
 							
 							<div class="pro-title"><?php echo $value['title']?></div>
 							<div class="pro-price"><?php echo number_format($value['price'])?> VND</div>
-							<a class="pull-right view-detail" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
+							<a class="view-detail" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								Chi tiết
 							</a>
 								<!-- <p class="pro-tech">

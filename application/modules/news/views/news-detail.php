@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/news.css">
 <div class="row">
 	<div class="bg-white col-md-12">
-		<h3 class="text-uppercase"><strong><?php echo $item['title']?></strong> </h3>
+		<h2 class="text-uppercase"><?php echo $item['title']?> </h2>
 		<hr>
 		<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'danh-muc/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 		<hr>
