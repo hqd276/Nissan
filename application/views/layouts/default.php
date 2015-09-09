@@ -72,7 +72,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="">
+<div class="row">
   <?php echo $template['partials']['header']; ?>
 
   <div class="middle container" >

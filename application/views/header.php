@@ -26,9 +26,9 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand visible-xs" href="#"><img src="<?php echo base_url('/assets/images/nissan-logo.png')?>"></a>
+		      <a class="navbar-brand visible-xs" href="#"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
 		      	<div class="pull-right text-uppercase visible-xs">
-					<h4>Xuân Kiên - Đại diện kinh doanh</h4>
+					<h4>Xuân Kiên</h4>
 					<div class="hotline"><strong> Hotline: 0902.902.555 </strong></div>
 				</div>
 		    </div>

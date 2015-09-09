@@ -24,7 +24,7 @@
 }
 .header .banner {
 	margin-top:20px;
-	margin-bottom: 20px;
+	/*margin-bottom: 20px;*/
 	color:#5b5b5b
 }
 .header .banner h3{
@@ -52,9 +52,16 @@
 	border-right: none;
 }
 @media (max-width: 768px) {
+	.header {
+		padding-left: -15px;
+		padding-right: -15px;
+	}
 	.header .navbar-nav {
 		width: 100%;
 		margin: 5px 0;
+	}
+	.header .hotline {
+		font-size: 13px;
 	}
 }
 .header .navbar-nav>li {

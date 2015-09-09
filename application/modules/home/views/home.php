@@ -54,7 +54,7 @@
 			</div>
 			<div class="col-sm-9 new-product hidden-xs">
 				<span class="top text-uppercase"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Sản phẩm mới</span>
-				<ul class="list-unstyled text-left">
+				<ul class="list-unstyled text-center">
 					<?php foreach ($products as $key => $value) {?>
             			<li class="">
 							<a class="pro-img" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
