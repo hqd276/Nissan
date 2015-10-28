@@ -1,5 +1,6 @@
-.product-detail .col-md-12 {
+.product-detail{
 	margin: 20px 0;
+  margin-top: 50px;
 }
 .product-detail .tab-content img {
   max-width: 100%;
@@ -10,8 +11,8 @@
 	margin: 0 10px;
 }
 .product-detail h1 {
-  font-size: 80px;
-  line-height: 80px;
+  font-size: 48px;
+  line-height: 48px;
   color: #141414;
   font-weight: 800;
 }

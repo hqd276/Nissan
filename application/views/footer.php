@@ -36,6 +36,12 @@
           <?php }?>
         </ul>
       </div>
+      <div class="col-sm-4 col-sm-offset-2 contact">
+        <span>NISSAN HÀ ĐÔNG</span><br>
+        Add: Km14+600 Quốc Lộ 6, P. Yên Nghĩa,Quận Hà Đông , TP.Hà Nội , Việt Nam<br>
+        Tel : (84 4)3357 1208 * Fax (84 4)3357 1203<br>
+        website : www.nissanmienbac.vn
+      </div>
     </div>
     <div class="clearfix"></div>
     <hr>

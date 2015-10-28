@@ -3,8 +3,22 @@
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url('du-toan-chi-phi')?>">Dự toán chi phí</a>
 	<hr>
-	<form method="get" action="">
+	<form method="post" action="">
 		<div class="col-sm-8 col-sm-offset-2">
+			<div class="form-group">
+				<div>
+					<span class="success">
+						<?php 
+						if(isset($b_Check))
+							if ($b_Check){
+								echo "Send Success!";
+							}else{
+								echo "Send Fail";
+							}
+						?>
+					</span>
+				</div>
+			</div>
 			<div class="col-sm-12">
 				<div class="form-group">
 					<label>Chọn xe</label>
@@ -58,7 +72,7 @@
 			</div>
 			<div class="col-sm-12 text-center">
 				<div class="form-group">
-					<button type="submit" class="btn btn-default text-uppercase">Gửi</button>
+					<button type="submit" class="btn btn-default text-uppercase" value="send" name="send">Gửi</button>
 				</div>
 			</div>
 		</div>
