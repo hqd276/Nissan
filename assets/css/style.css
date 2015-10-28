@@ -7,9 +7,13 @@ body {
 	font-family: Roboto;
 }
 .middle {
-	margin-top: 145px;
+	margin-top: 125px;
 }
-
+@media (max-width: 768px) {
+	.middle {
+		margin-top: 70px;
+	}
+}
 .banner-hoz {
 	width: 150px;
 	position: absolute;
