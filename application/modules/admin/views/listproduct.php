@@ -1,4 +1,4 @@
-<div class="contact-form col-sm-12 bg-white">
+<div class="contact-form col-sx-12 bg-white">
 	<h2 class="text-uppercase">List product</h2>
 	<a href="<?php echo base_url('/admin/product/add/'.$type)?>" class="btn btn-default pull-right"> Add new product </a>
 	

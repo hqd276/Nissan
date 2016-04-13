@@ -11,21 +11,21 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-			<div class="col-sm-10">
+			<label for="inputEmail3" class="col-sx-2 control-label">Email</label>
+			<div class="col-sx-10">
 			  	<input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email" value="<?php echo set_value('email'); ?>">
 				<label class="control-label" for="inputError1"><?php echo form_error('email'); ?></label>
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-			<div class="col-sm-10">
+			<label for="inputPassword3" class="col-sx-2 control-label">Password</label>
+			<div class="col-sx-10">
 			  	<input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password" value="<?php echo set_value('password'); ?>">
 			  	<label class="control-label" for="inputError1"><?php echo form_error('password'); ?></label>
 			</div>
 		</div>
 		<!-- <div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sx-offset-2 col-sx-10">
 			  <div class="checkbox">
 			    <label>
 			      <input type="checkbox"> Remember me
@@ -34,7 +34,7 @@
 			</div>
 		</div> -->
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-sx-offset-2 col-sx-10">
 			  <button type="submit" class="btn btn-default">Sign in</button>
 			</div>
 		</div>
