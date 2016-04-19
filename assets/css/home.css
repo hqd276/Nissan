@@ -48,11 +48,11 @@
 
 }
 .content-home .new-product ul li {
-	width: 20%;
+	/*width: 20%;*/
 	padding: 8px;
 	float: left;
 	border: 1px solid #ccc;
-	height: 250px;
+	height: 260px;
 	margin-top: 20px;
 }
 .content-home .new-product ul li img{
@@ -60,6 +60,9 @@
 	margin:10px auto;
 }
 .content-home .view-detail {
+	position: absolute;
+    width: calc(100% - 16px);
+    bottom: 8px;
 	text-transform: uppercase;
 	display: block;
 	color: #fff;
@@ -75,13 +78,13 @@
 .content-home .new-product .pro-title { 
 	line-height: 25px;
 	color: #c41619;
-	font-size: 18px;
+	/*font-size: 18px;*/
 	font-weight: bold;
 }
 .content-home .new-product .pro-price { 
 	line-height: 25px;
 	color: #000;
-	font-size: 16px;
+	/*font-size: 16px;*/
 }
 .content-home .new-product p { 
 	color: #c51756;

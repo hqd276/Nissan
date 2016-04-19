@@ -1,4 +1,4 @@
-<div class="contact-form col-sx-12 bg-white">
+<div class="contact-form col-xs-12 bg-white">
 	<h2 class="text-uppercase">List page</h2>
 	
 	<table class="table table-bordered table-hover">

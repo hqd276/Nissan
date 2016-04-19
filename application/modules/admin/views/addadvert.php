@@ -1,4 +1,4 @@
-<div class="contact-form col-sx-12 bg-white">
+<div class="contact-form col-xs-12 bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<a href="<?php echo base_url('/admin/advert/index')?>" class="btn btn-default pull-right"> List advert </a>
 
@@ -19,15 +19,15 @@
 				<?php if(isset($upload_mess)) echo '<label class="control-label alert alert-warning" for="inputError1">'.$upload_mess.'</label>'; ?>
 			</div>
 		</div>
-		<div class="form-group col-sx-12">
-			<label for="inputEmail3" class="col-sx-2 control-label">Name</label>
-			<div class="col-sx-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Name</label>
+			<div class="col-xs-10">
 			  	<input type="" class="form-control" id="inputEmail3" name="name" placeholder="Name" value="<?php echo $item['name']; ?>">
 			</div>
 		</div>
-		<div class="form-group col-sx-12">
-			<label for="inputEmail3" class="col-sx-2 control-label">Image</label>
-			<div class="col-sx-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Image</label>
+			<div class="col-xs-10">
 				<?php 
 				if ($item['image']!='') {
 					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/advert/".$item['image'])."'/>";
@@ -36,15 +36,15 @@
 			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
 			</div>
 		</div>
-		<div class="form-group col-sx-12">
-			<label for="inputEmail3" class="col-sx-2 control-label">Description</label>
-			<div class="col-sx-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Description</label>
+			<div class="col-xs-10">
 				<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
 			</div>
 		</div>
-		<div class="form-group col-sx-12">
-			<label for="inputEmail3" class="col-sx-2 control-label">Position</label>
-			<div class="col-sx-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Position</label>
+			<div class="col-xs-10">
 				<select class="form-control" name="position">
 					<option value='1'>Top</option>
 					<option value='2'>Middle</option>
@@ -52,15 +52,15 @@
 				</select>
 			</div>
 		</div>
-		<div class="form-group col-sx-12">
-			<label for="inputEmail3" class="col-sx-2 control-label">Active</label>
-			<div class="col-sx-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Active</label>
+			<div class="col-xs-10">
 				<input type ="checkbox" name="status" value="1" <?php echo ($item['status'] == 1)?"checked":""; ?>>
 			</div>
 		</div>
 		
 		<div class="form-group">
-			<div class="col-sx-offset-2 col-sx-10">
+			<div class="col-xs-offset-2 col-xs-10">
 			  <button type="submit" class="btn btn-default" value="ok" name="submit">Send</button>
 			</div>
 		</div>

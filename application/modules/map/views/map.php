@@ -18,9 +18,9 @@
 
 </style>
 
-<div class="contact-form col-sx-12 bg-white ">
+<div class="contact-form col-xs-12 bg-white ">
 
-	<div class="col-sx-4">
+	<div class="col-xs-4">
 
 		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
 
@@ -32,7 +32,7 @@
 
 	</div>
 
-	<div class="col-sx-8">
+	<div class="col-xs-8">
 
 		<div id="map-canvas"></div>
 

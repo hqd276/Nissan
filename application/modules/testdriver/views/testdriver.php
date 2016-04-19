@@ -1,10 +1,10 @@
-<div class="estimates-form col-sx-12">
+<div class="estimates-form col-xs-12">
 	<h2 class="text-uppercase">Đăng kí lái thử</h2>
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url('du-toan-chi-phi')?>">Dự toán chi phí</a>
 	<hr>
 	<form method="post" action="">
-		<div class="col-sx-8 col-sx-offset-2">
+		<div class="col-xs-8 col-xs-offset-2">
 			<div class="form-group">
 				<div>
 					<span class="success">
@@ -19,7 +19,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="col-sx-12">
+			<div class="col-xs-12">
 				<div class="form-group">
 					<label>Chọn xe</label>
 					<select class="form-control" name="p">
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<hr>
-			<div class="col-sx-6">
+			<div class="col-xs-6">
 				<div class="form-group">
 					<label>Họ tên</label>
 					<input type="text" class="form-control" name="name">
@@ -52,7 +52,7 @@
 					<input type="text" class="form-control" name="email">
 				</div>
 			</div>
-			<div class="col-sx-6">
+			<div class="col-xs-6">
 				<div class="form-group">
 					<label>Địa chỉ</label>
 					<input type="text" class="form-control" name="address">
@@ -70,7 +70,7 @@
 					<input type="text" class="form-control" name="job">
 				</div>
 			</div>
-			<div class="col-sx-12 text-center">
+			<div class="col-xs-12 text-center">
 				<div class="form-group">
 					<button type="submit" class="btn btn-default text-uppercase" value="send" name="send">Gửi</button>
 				</div>

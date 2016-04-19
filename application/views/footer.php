@@ -8,11 +8,11 @@
       <li><a href="<?php echo base_url().'ban-do-showroom'?>">Bản đồ Showroom</a></li>
     </ul>
     <div class=" hidden-xs">
-      <div class="col-sm-2">
+      <div class="col-sm-4">
         <h5 class="text-uppercase">Sản phẩm</h5>
         <ul class="list-unstyled">
           <?php foreach ($products as $key => $value) {?>
-            <li class="">
+            <li class="col-sm-6">
               <a href="">
                 <div class="pro-title"><?php echo $value['title']?></div>
               </a>
@@ -36,11 +36,11 @@
           <?php }?>
         </ul>
       </div>
-      <div class="col-sm-4 col-sm-offset-2 contact">
+      <div class="col-sm-4 contact">
         <span>NISSAN HÀ ĐÔNG</span><br>
-        Add: Km14+600 Quốc Lộ 6, P. Yên Nghĩa,Quận Hà Đông , TP.Hà Nội , Việt Nam<br>
-        Tel : (84 4)3357 1208 * Fax (84 4)3357 1203<br>
-        website : www.nissanmienbac.vn
+        Add: 48 Láng Hạ, Quận Đống Đa, TP. Hà Nội, Việt Nam<br>
+        Tel : (84 4)3766 7777 * Fax (84 4)3248 4515<br>
+        website : www.nissan.hanoi.vn
       </div>
     </div>
     <div class="clearfix"></div>
