@@ -46,7 +46,7 @@
 				            		<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
 				            		<hr>
 				                    <div class="pro-title"><?php echo $value['title']?></div>
-									<div class="pro-price"><?php echo $value['price']?> VND</div>
+									<div class="pro-price"><?php echo number_format($value['price'])?> VND</div>
 				            	</a>
 				            	<a class="view-detail visible-xs" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 									Chi tiết
@@ -64,26 +64,24 @@
 					    <span class="sr-only">Next</span>
 				 	 </a>
 	            </div>
-	            <div class="panel">
+	            <div class="panel panel-default">
 		            <h4>ĐƯỜNG ĐẾN ĐẠI LÝ NISSAN</h4>
 	        		<div id="map-canvas"></div>
         		</div>
 
-	            <div class="panel">
-	            	<div class="col-xs-12" style="border: 1px solid #ccc; padding-top: 10px; padding-bottom: 10px">
-	            		<strong>
-	            		<p>HÃY LIÊN HỆ HOTLINE BÁN HÀNG</p>
-	            		<p style="color: red; font-size: 18px">0902.902.555</p>
-	            		<p>ĐỂ ĐƯỢC TƯ VẤN VÀ HỖ TRỢ CHU ĐÁO NHẤT</p>
-    					</strong>
-            		</div>
+	            <div class="panel panel-default">
+            		<strong>
+            		<p style="font-size: 16px;">HÃY LIÊN HỆ HOTLINE BÁN HÀNG</p>
+            		<p style="color: red; font-size: 18px">0902.902.555</p>
+            		<p>ĐỂ ĐƯỢC TƯ VẤN VÀ HỖ TRỢ CHU ĐÁO NHẤT</p>
+					</strong>
 	            </div>
 			</div>
 			<div class="col-xs-9 new-product hidden-xs">
 				<span class="top text-uppercase"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Sản phẩm mới</span>
 				<ul class="list-unstyled text-center">
 					<?php foreach ($products as $key => $value) {?>
-            			<li class="col-xs-2">
+            			<li class="">
 							<a class="pro-img" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
 							</a>
