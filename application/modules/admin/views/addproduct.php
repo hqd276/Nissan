@@ -30,7 +30,7 @@ tinymce.init({
 </form>
 
 <div class="contact-form col-sm-12 bg-white">
-	<h2 class="text-uppercase">Add new <?php echo $title?></h2>
+	<h2 class="text-uppercase"><?php echo $page_title?></h2>
 	<a href="<?php echo base_url('/admin/product/index/'.$type)?>" class="btn btn-default pull-right"> List <?php echo $title?> </a>
 	<a href="<?php echo base_url('/admin/product/add/'.$type)?>" class="btn btn-default pull-right"> Add new <?php echo $title?> </a>
 	<form class="form-horizontal col-md-12" role="form" method="post" enctype="multipart/form-data" action="">
@@ -51,10 +51,11 @@ tinymce.init({
 			</div>
 		</div>
 		<ul class="nav nav-tabs" role="tablist">
-		  <li role="presentation" class="active"><a href="#detail" aria-controls="home" role="tab" data-toggle="tab">Detail</a></li>
-		  <li role="presentation"><a href="#version" aria-controls="home" role="tab" data-toggle="tab">Version</a></li>
-		  <li role="presentation"><a href="#furniture" aria-controls="home" role="tab" data-toggle="tab">Furniture</a></li>
-		  <li role="presentation"><a href="#exterior" aria-controls="home" role="tab" data-toggle="tab">Exterior</a></li>
+		  <li role="presentation" class="active"><a href="#detail" aria-controls="home" role="tab" data-toggle="tab">Chi tiết</a></li>
+		  <li role="presentation"><a href="#version" aria-controls="home" role="tab" data-toggle="tab">Phiên bản</a></li>
+		  <li role="presentation"><a href="#furniture" aria-controls="home" role="tab" data-toggle="tab">Nội thất</a></li>
+		  <li role="presentation"><a href="#exterior" aria-controls="home" role="tab" data-toggle="tab">Ngoại thất</a></li>
+		  <li role="presentation"><a href="#meta" aria-controls="home" role="tab" data-toggle="tab">Quản lý SEO</a></li>
 		</ul>
 		<div class="tab-content">
 			<div id="detail"  class="tab-pane active" >
@@ -248,6 +249,31 @@ tinymce.init({
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 					  <button type="submit" class="btn btn-default" value="ok_exterior" name="submit">Send</button>
+					</div>
+				</div>
+			</div>
+			<div id="meta" class="tab-pane" >
+				<div class="form-group col-sm-12">
+					<label class="col-sm-3 control-label">Tiêu đề</label>
+					<div class="col-sm-9">
+						<input class="form-control" name="meta_title" value="<?php echo $item['meta_title']; ?>">
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="col-sm-3 control-label">Từ khóa</label>
+					<div class="col-sm-9">
+						<input class="form-control" name="meta_keyword" value="<?php echo $item['meta_keyword']; ?>">
+					</div>
+				</div>
+				<div class="form-group col-sm-12">
+					<label class="col-sm-3 control-label">Giới thiệu</label>
+					<div class="col-sm-9">
+						<input class="form-control" name="meta_description" value="<?php echo $item['meta_description']; ?>">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+					  <button type="submit" class="btn btn-default" value="ok_meta" name="submit">Send</button>
 					</div>
 				</div>
 			</div>

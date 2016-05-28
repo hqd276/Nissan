@@ -36,6 +36,12 @@
           <?php }?>
         </ul>
       </div>
+      <div class="col-sm-4 col-sm-offset-2 contact">
+        <span>NISSAN HÀ NỘI</span><br>
+        Add: 48 Láng Hạ, Quận Đống Đa, TP.Hà Nội , Việt Nam<br>
+        Tel : (84 4)3766 7777 * Fax (84 4)3248 4515<br>
+        website : www.nissan.hanoi.vn
+      </div>
     </div>
     <div class="clearfix"></div>
     <hr>

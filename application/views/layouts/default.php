@@ -3,8 +3,9 @@
 <head>
 <title><?php echo (isset($title))?$title:$setting['title']['data']->description?></title>
 <meta name="description" content="<?php echo (isset($description))? htmlspecialchars($description):$setting['description']['data']->description?>">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keyword" content="<?php echo (isset($keyword))? htmlspecialchars($keyword):$setting['keyword']['data']->description?>">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
 <?php if (isset($item)){?>
 <meta property="og:title" content="<?php echo $item['title'] ?>"/>

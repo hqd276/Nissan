@@ -97,7 +97,10 @@ class Product extends MX_Controller {
 
 		$this->modelproduct->updateProductBy('slug',$slug,array('views'=>$detail_product['views']+1));
 
-		$data['title'] = $detail_product['title'] ;
+		$data['title'] = $detail_product['meta_title'] ;
+		$data['description'] = $detail_product['meta_description'] ;
+		$data['keyword'] = $detail_product['meta_keyword'] ;
+
 		$data['item'] = $detail_product;
 		$this->template->build('product-detail',$data);
 	}

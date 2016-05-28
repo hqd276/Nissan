@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact.css">
 
-<div class="contact-form col-sm-12 bg-white ">
+<div class="contact-form col-sm-12 bg-white">
 	<div class="col-sm-4">
 		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
 		<p>

@@ -171,6 +171,7 @@ class Product extends MX_Controller{
 		$this->load->helper(array('form')); 
 
 		$dataC = $this->modelproduct->getproductById($id);
+		$data['page_title'] = "Sửa thông tin sản phẩm <strong>[".$dataC['title']."]</strong>";
 		
 		if ($this->input->post('submit') == "ok") {
 			$this->load->library(array('form_validation'));
@@ -260,6 +261,15 @@ class Product extends MX_Controller{
 				}
 				$dataC['exterior'] = serialize($exterior_img);
 			}
+
+			if ($this->modelproduct->updateproduct($id,$dataC)){
+				$data['b_Check']= true;
+			}
+
+		}elseif($this->input->post('submit') == "ok_meta"){
+			$dataC['meta_title'] = $this->input->post('meta_title'); 
+			$dataC['meta_keyword'] = $this->input->post('meta_keyword'); 
+			$dataC['meta_description'] = $this->input->post('meta_description'); 
 
 			if ($this->modelproduct->updateproduct($id,$dataC)){
 				$data['b_Check']= true;
