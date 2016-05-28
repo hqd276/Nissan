@@ -21,7 +21,7 @@ tinymce.init({
 });
 </script>
 
-<div class="contact-form col-sm-12 bg-white">
+<div class="contact-form col-xs-12 bg-white">
 	<h2 class="text-uppercase"><?php echo $title?></h2>
 	<a href="/admin/page" class="btn btn-default pull-right"> List Page </a>
 
@@ -42,19 +42,19 @@ tinymce.init({
 				<?php if(isset($upload_mess)) echo '<label class="control-label alert alert-warning" for="inputError1">'.$upload_mess.'</label>'; ?>
 			</div>
 		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Setting</label>
-			<label for="inputEmail3" class="col-sm-10 control-label text-left"><?php echo $item['key']; ?></label>
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Setting</label>
+			<label for="inputEmail3" class="col-xs-10 control-label text-left"><?php echo $item['key']; ?></label>
 		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Name</label>
-			<div class="col-sm-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Name</label>
+			<div class="col-xs-10">
 			  	<input type="" class="form-control" id="inputEmail3" name="name" placeholder="Name" value="<?php echo $item['name']; ?>">
 			</div>
 		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
-			<div class="col-sm-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Image</label>
+			<div class="col-xs-10">
 				<?php 
 				if ($item['image']!='') {
 					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/settings/".$item['image'])."'/>";
@@ -63,20 +63,20 @@ tinymce.init({
 			  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
 			</div>
 		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
-			<div class="col-sm-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Description</label>
+			<div class="col-xs-10">
 				<textarea class="form-control" name="description" placeholder="Description" style="height:150px;"><?php echo $item['description']; ?></textarea>
 			</div>
 		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Detail</label>
-			<div class="col-sm-10">
+		<div class="form-group col-xs-12">
+			<label for="inputEmail3" class="col-xs-2 control-label">Detail</label>
+			<div class="col-xs-10">
 				<textarea class="form-control" id="detail" name="detail" placeholder="Detail"><?php echo $item['detail']; ?></textarea>
 			</div>
 		</div>
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
+			<div class="col-xs-offset-2 col-xs-10">
 			  <button type="submit" class="btn btn-default" value="ok" name="submit">Send</button>
 			</div>
 		</div>

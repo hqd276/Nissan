@@ -48,3 +48,10 @@
 	margin: 20px;
 	margin-top: 10px;
 }
+.footer .contact {
+	margin-top: 30px;
+	color: #808080;
+}
+.footer .contact span{
+	color: #ff0000;
+}

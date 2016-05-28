@@ -34,7 +34,7 @@
 	</div>
 
 	<div class="content-home  text-center">
-			<div class="col-sm-3 hot-product">
+			<div class="col-xs-3 hot-product">
 				<span class="top text-uppercase"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Sản phẩm bán chạy</span>
 
 				<div id="myCarousel" class="carousel slide vertical">
@@ -44,8 +44,9 @@
 				            <div class="item <?php if($key==0) echo 'active'?>">
 				            	<a href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 				            		<img src="<?php echo base_url('/uploads/product/thumbs/'.$value['image'])?>">
+				            		<hr>
 				                    <div class="pro-title"><?php echo $value['title']?></div>
-									<!-- <div class="pro-price"><?php echo $value['price']?> VND</div> -->
+									<div class="pro-price"><?php echo number_format($value['price'])?> VND</div>
 				            	</a>
 				            	<a class="view-detail visible-xs" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 									Chi tiết
@@ -63,20 +64,33 @@
 					    <span class="sr-only">Next</span>
 				 	 </a>
 	            </div>
+<<<<<<< HEAD
 	            <div class="panel">
+=======
+	            <div class="panel panel-default">
+>>>>>>> origin/master
 		            <h4>ĐƯỜNG ĐẾN ĐẠI LÝ NISSAN</h4>
 	        		<div id="map-canvas"></div>
         		</div>
 
+<<<<<<< HEAD
 	            <div class="panel">
             		<strong>
             		<p>HÃY LIÊN HỆ HOTLINE BÁN HÀNG</p>
             		<p style="color: red; font-size: 16px">0902.902.555</p>
             		<p>ĐỂ ĐƯỢC TƯ VẤN VÀ HỖ TRỢ CHU ĐÁO NHẤT</p>
             		</strong>
+=======
+	            <div class="panel panel-default">
+            		<strong>
+            		<p style="font-size: 16px;">HÃY LIÊN HỆ HOTLINE BÁN HÀNG</p>
+            		<p style="color: red; font-size: 18px">0902.902.555</p>
+            		<p>ĐỂ ĐƯỢC TƯ VẤN VÀ HỖ TRỢ CHU ĐÁO NHẤT</p>
+					</strong>
+>>>>>>> origin/master
 	            </div>
 			</div>
-			<div class="col-sm-9 new-product hidden-xs">
+			<div class="col-xs-9 new-product hidden-xs">
 				<span class="top text-uppercase"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Sản phẩm mới</span>
 				<ul class="list-unstyled text-center">
 					<?php foreach ($products as $key => $value) {?>
@@ -90,10 +104,6 @@
 							<a class="view-detail" href="<?php echo base_url('/nissan/'.$value['slug'])?>">
 								Chi tiết
 							</a>
-								<!-- <p class="pro-tech">
-									<?php echo $value['description']?>
-								</p> -->
-							
 						</li>
             		<?php }?>
 				</ul>
@@ -115,7 +125,11 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   var icon = {
+<<<<<<< HEAD
           url: 'http://nissanmienbac.vn/assets/images/logo.png',
+=======
+          url: 'http://nissan.hanoi.vn/assets/images/logo.png',
+>>>>>>> origin/master
           // This marker is 20 pixels wide by 32 pixels tall.
           // size: new google.maps.Size(80, 80),
           scaledSize: new google.maps.Size(30, 40), // scaled size
@@ -144,9 +158,12 @@ function initialize() {
       title: 'NISSAN Hà Đông.'
   });
   infowindow.open(map,marker);
+<<<<<<< HEAD
   // google.maps.event.addListener(marker, 'click', function() {
   //   infowindow.open(map,marker);
   // });
+=======
+>>>>>>> origin/master
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

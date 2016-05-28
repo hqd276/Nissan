@@ -1,8 +1,8 @@
 <!-- <a class="banner-hoz left hidden-xs" href=""><img src="<?php echo base_url('/assets/images/h-banner1.jpg')?>"></a>
 <a class="banner-hoz right hidden-xs" href=""><img src="<?php echo base_url('/assets/images/h-banner2.jpg')?>"></a>
  -->
-<div class="header text-center container navbar-fixed-top">
-	<div class="hidden-xs">
+<div class="header text-center navbar-fixed-top">
+	<div class="container hidden-xs">
 		<div class="col-sm-2 logo">
 			<a href="/"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
 		</div>
@@ -20,12 +20,12 @@
 		<div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 		        <span class="sr-only">Toggle navigation</span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
-		      </button>
+		      </button> -->
 		      <a class="navbar-brand visible-xs" href="#"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
 		      	<div class="pull-right text-uppercase visible-xs">
 					<h4>Xuân Kiên</h4>
@@ -34,7 +34,8 @@
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+		    <div class="" id="bs-example-navbar-collapse-1">
 		    <strong>
 		      <ul class="nav navbar-nav text-uppercase pull-right">
 		        <li class=""><a class="dropdown-toggle" href="/">Trang chủ <span class="sr-only">(current)</span></a></li>

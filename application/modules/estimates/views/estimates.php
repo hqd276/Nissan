@@ -1,10 +1,10 @@
-<div class="estimates-form col-sm-12">
+<div class="estimates-form col-xs-12">
 	<h2 class="text-uppercase">Dự toán chi phí</h2>
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url('du-toan-chi-phi')?>">Dự toán chi phí</a>
 	<hr>
 	<form method="get" action="">
-		<div class="col-sm-6">
+		<div class="col-xs-6">
 			<div class="form-group">
 				<label>Chọn xe</label>
 				<select class="form-control" name="p">
@@ -35,7 +35,7 @@
 				<button type="submit" class="btn btn-default text-uppercase">Chọn</button>
 			</div>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-xs-6">
 			
 		</div>
 	</form>

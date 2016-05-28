@@ -19,11 +19,11 @@
 			<hr>
 			<!-- <div class="share-social">
 				Thích và chia sẻ bài viết này :<br>
-				<div class="col-sm-6">
+				<div class="col-xs-6">
 					<div class="fb-share-button" data-href="<?php echo base_url().'chi-tiet/'.$item['slug']?>" data-layout="button_count"></div>
 					<div class="fb-like" data-href="<?php echo base_url().'chi-tiet/'.$item['slug']?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-xs-6">
 					<a class="twitter-share-button twitter-count-horizontal" href="<?php echo base_url().'chi-tiet/'.$item['slug']?>">Tweet</a>
 					<div class="g-plus" data-action="share"></div>
 				</div>
@@ -36,7 +36,7 @@
 			<!-- <ul class="list-unstyled other-news">
 			<?php if (count($other_news)>0) {
 				foreach ($other_news as $key => $value) {?>
-					<li class="col-sm-6">
+					<li class="col-xs-6">
 						<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"> 
 							<?php if($value['image']!=''){?>
 							<img class="pull-left" src="<?php echo base_url().'uploads/news/thumbs/'.$value['image']?>">

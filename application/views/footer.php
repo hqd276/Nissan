@@ -8,11 +8,11 @@
       <li><a href="<?php echo base_url().'ban-do-showroom'?>">Bản đồ Showroom</a></li>
     </ul>
     <div class=" hidden-xs">
-      <div class="col-sm-2">
+      <div class="col-sm-4">
         <h5 class="text-uppercase">Sản phẩm</h5>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled row">
           <?php foreach ($products as $key => $value) {?>
-            <li class="">
+            <li class="col-sm-6">
               <a href="">
                 <div class="pro-title"><?php echo $value['title']?></div>
               </a>
@@ -29,16 +29,22 @@
         </ul>
       </div>
       <div class="col-sm-2">
-        <h5 class="text-uppercase">Nissan hà đông</h5>
+        <h5 class="text-uppercase">Nissan Hà Nội</h5>
         <ul class="list-unstyled">
           <?php foreach ($abouts as $key => $value) {?>
             <li><a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><?php echo $value['title']?></a></li>
           <?php }?>
         </ul>
       </div>
+<<<<<<< HEAD
       <div class="col-sm-4 col-sm-offset-2 contact">
         <span>NISSAN HÀ NỘI</span><br>
         Add: 48 Láng Hạ, Quận Đống Đa, TP.Hà Nội , Việt Nam<br>
+=======
+      <div class="col-sm-4 contact">
+        <span>NISSAN HÀ NỘI</span><br>
+        Add: 48 Láng Hạ, Quận Đống Đa, TP. Hà Nội, Việt Nam<br>
+>>>>>>> origin/master
         Tel : (84 4)3766 7777 * Fax (84 4)3248 4515<br>
         website : www.nissan.hanoi.vn
       </div>

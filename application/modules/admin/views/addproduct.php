@@ -29,7 +29,11 @@ tinymce.init({
 	<input name="image" type="file" onchange="$('#my_form').submit();this.value='';">
 </form>
 
+<<<<<<< HEAD
 <div class="contact-form col-sm-12 bg-white">
+=======
+<div class="contact-form col-xs-12 bg-white">
+>>>>>>> origin/master
 	<h2 class="text-uppercase"><?php echo $page_title?></h2>
 	<a href="<?php echo base_url('/admin/product/index/'.$type)?>" class="btn btn-default pull-right"> List <?php echo $title?> </a>
 	<a href="<?php echo base_url('/admin/product/add/'.$type)?>" class="btn btn-default pull-right"> Add new <?php echo $title?> </a>
@@ -59,21 +63,21 @@ tinymce.init({
 		</ul>
 		<div class="tab-content">
 			<div id="detail"  class="tab-pane active" >
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Title</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Title</label>
+					<div class="col-xs-10">
 					  	<input type="" class="form-control" id="inputEmail3" name="title" placeholder="Title" value="<?php echo $item['title']; ?>">
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Url</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Url</label>
+					<div class="col-xs-10">
 					  	<?php echo $item['slug']; ?>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Image</label>
+					<div class="col-xs-10">
 						<?php 
 						if ($item['image']!='') {
 							echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/product/".$item['image'])."'/>";
@@ -82,64 +86,64 @@ tinymce.init({
 					  	<input type="file" class="form-control" id="inputEmail3" name="image" placeholder="Image">
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Price</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Price</label>
+					<div class="col-xs-10">
 					  	<input type="" class="form-control" id="inputEmail3" name="price" placeholder="Price" value="<?php echo $item['price']; ?>">
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Description</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Description</label>
+					<div class="col-xs-10">
 						<textarea class="form-control" name="description" placeholder="Description"><?php echo $item['description']; ?></textarea>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Detail</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Detail</label>
+					<div class="col-xs-10">
 						<textarea class="form-control" id="detail" name="detail" placeholder="Detail"><?php echo $item['detail']; ?></textarea>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Video</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Video</label>
+					<div class="col-xs-10">
 					  	<input type="" class="form-control" id="inputEmail3" name="video" placeholder="Video" value="<?php echo $item['video']; ?>">
 					  	Chỉ điền phần in đậm: https://www.youtube.com/watch?v=<strong>vsknwG6Q7VY</strong>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Tag</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Tag</label>
+					<div class="col-xs-10">
 					  	<input type="" class="form-control" id="inputEmail3" name="tag" placeholder="Tag" value="<?php echo $item['tag']; ?>">
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Order</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Order</label>
+					<div class="col-xs-10">
 					  	<input type="" class="form-control" id="inputEmail3" name="order" placeholder="Order" value="<?php echo $item['order']; ?>">
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Hot product</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Hot product</label>
+					<div class="col-xs-10">
 						<input type ="checkbox" name="hot_product" value="1" <?php echo ($item['hot_product'] == 1)?"checked":""; ?>>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Home product</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Home product</label>
+					<div class="col-xs-10">
 						<input type ="checkbox" name="home_product" value="1" <?php echo ($item['home_product'] == 1)?"checked":""; ?>>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<label for="inputEmail3" class="col-sm-2 control-label">Publish</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<label for="inputEmail3" class="col-xs-2 control-label">Publish</label>
+					<div class="col-xs-10">
 						<input type ="checkbox" name="status" value="1" <?php echo ($item['status'] == 1)?"checked":""; ?>>
 					</div>
 				</div>
 				
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-xs-offset-2 col-xs-10">
 					  <button type="submit" class="btn btn-default" value="ok" name="submit">Send</button>
 					</div>
 				</div>
@@ -148,21 +152,21 @@ tinymce.init({
 				<?php if($item['versions']){
 					foreach ($item['versions'] as $k => $v) { ?>
 					<div class="version">
-						<div class="form-group col-sm-12">
-							<label class="col-sm-2 control-label">Title</label>
-							<div class="col-sm-10">
+						<div class="form-group col-xs-12">
+							<label class="col-xs-2 control-label">Title</label>
+							<div class="col-xs-10">
 							  	<input type="" class="form-control" id="inputEmail3" name="titles[]" placeholder="Title" value="<?php echo $v['title']?>">
 							</div>
 						</div>
-						<div class="form-group col-sm-12">
-							<label class="col-sm-2 control-label">Price</label>
-							<div class="col-sm-10">
+						<div class="form-group col-xs-12">
+							<label class="col-xs-2 control-label">Price</label>
+							<div class="col-xs-10">
 							  	<input type="" class="form-control" id="inputEmail3" name="prices[]" placeholder="Price" value="<?php echo $v['price']?>">
 							</div>
 						</div>
-						<div class="form-group col-sm-12">
-							<label class="col-sm-2 control-label">Detail</label>
-							<div class="col-sm-10">
+						<div class="form-group col-xs-12">
+							<label class="col-xs-2 control-label">Detail</label>
+							<div class="col-xs-10">
 								<textarea class="form-control" id="detail" name="details[]" placeholder="Detail"><?php echo $v['detail']?></textarea>
 							</div>
 						</div>
@@ -170,32 +174,32 @@ tinymce.init({
 				<?php }
 				}?>
 				<div class="version core hidden">
-					<div class="form-group col-sm-12">
-						<label class="col-sm-2 control-label">Title</label>
-						<div class="col-sm-10">
+					<div class="form-group col-xs-12">
+						<label class="col-xs-2 control-label">Title</label>
+						<div class="col-xs-10">
 						  	<input type="" class="form-control" id="inputEmail3" name="titles[]" placeholder="Title" value="">
 						</div>
 					</div>
-					<div class="form-group col-sm-12">
-						<label class="col-sm-2 control-label">Price</label>
-						<div class="col-sm-10">
+					<div class="form-group col-xs-12">
+						<label class="col-xs-2 control-label">Price</label>
+						<div class="col-xs-10">
 						  	<input type="" class="form-control" id="inputEmail3" name="prices[]" placeholder="Price" value="">
 						</div>
 					</div>
-					<div class="form-group col-sm-12">
-						<label class="col-sm-2 control-label">Detail</label>
-						<div class="col-sm-10">
+					<div class="form-group col-xs-12">
+						<label class="col-xs-2 control-label">Detail</label>
+						<div class="col-xs-10">
 							<textarea class="form-control detail-v" id="detail" name="details[]" placeholder="Detail"></textarea>
 						</div>
 					</div>
 				</div>
-				<div class="form-group col-sm-12">
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<div class="col-xs-10">
 						<span class="btn btn-default add-more-version">Add more Version</span>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-xs-offset-2 col-xs-10">
 					  <button type="submit" class="btn btn-default" value="ok_version" name="submit">Send</button>
 					</div>
 				</div>
@@ -203,25 +207,25 @@ tinymce.init({
 			<div id="furniture" class="tab-pane" >
 				<?php if($item['furnitures']){
 					foreach ($item['furnitures'] as $k => $v) { ?>
-					<div class="col-sm-3"> 
+					<div class="col-xs-3"> 
 						<img style="width:100%" src="<?php echo base_url("uploads/product-furniture/".$v); ?>">
 					</div>
 				<?php }
 				}?>
-				<div class="form-group col-sm-12 furniture core hidden">
-					<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12 furniture core hidden">
+					<label for="inputEmail3" class="col-xs-2 control-label">Image</label>
+					<div class="col-xs-10">
 					  	<input type="file" class="form-control" id="inputEmail3" name="furniture[]" placeholder="Image">
 					</div>
 				</div>
 
-				<div class="form-group col-sm-12">
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<div class="col-xs-10">
 						<span class="btn btn-default add-more-furniture">Add more furniture</span>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-xs-offset-2 col-xs-10">
 					  <button type="submit" class="btn btn-default" value="ok_furniture" name="submit">Send</button>
 					</div>
 				</div>
@@ -229,30 +233,31 @@ tinymce.init({
 			<div id="exterior" class="tab-pane" >
 				<?php if($item['exteriors']){
 					foreach ($item['exteriors'] as $k => $v) { ?>
-					<div class="col-sm-3"> 
+					<div class="col-xs-3"> 
 						<img style="width:100%" src="<?php echo base_url("uploads/product-exterior/".$v); ?>">
 					</div>
 				<?php }
 				}?>
-				<div class="form-group col-sm-12 exterior core hidden">
-					<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12 exterior core hidden">
+					<label for="inputEmail3" class="col-xs-2 control-label">Image</label>
+					<div class="col-xs-10">
 					  	<input type="file" class="form-control" id="inputEmail3" name="exterior[]" placeholder="Image">
 					</div>
 				</div>
 
-				<div class="form-group col-sm-12">
-					<div class="col-sm-10">
+				<div class="form-group col-xs-12">
+					<div class="col-xs-10">
 						<span class="btn btn-default add-more-exterior">Add more exterior</span>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-xs-offset-2 col-xs-10">
 					  <button type="submit" class="btn btn-default" value="ok_exterior" name="submit">Send</button>
 					</div>
 				</div>
 			</div>
 			<div id="meta" class="tab-pane" >
+<<<<<<< HEAD
 				<div class="form-group col-sm-12">
 					<label class="col-sm-3 control-label">Tiêu đề</label>
 					<div class="col-sm-9">
@@ -268,11 +273,32 @@ tinymce.init({
 				<div class="form-group col-sm-12">
 					<label class="col-sm-3 control-label">Giới thiệu</label>
 					<div class="col-sm-9">
+=======
+				<div class="form-group col-xs-12">
+					<label class="col-xs-3 control-label">Tiêu đề</label>
+					<div class="col-xs-9">
+						<input class="form-control" name="meta_title" value="<?php echo $item['meta_title']; ?>">
+					</div>
+				</div>
+				<div class="form-group col-xs-12">
+					<label class="col-xs-3 control-label">Từ khóa</label>
+					<div class="col-xs-9">
+						<input class="form-control" name="meta_keyword" value="<?php echo $item['meta_keyword']; ?>">
+					</div>
+				</div>
+				<div class="form-group col-xs-12">
+					<label class="col-xs-3 control-label">Giới thiệu</label>
+					<div class="col-xs-9">
+>>>>>>> origin/master
 						<input class="form-control" name="meta_description" value="<?php echo $item['meta_description']; ?>">
 					</div>
 				</div>
 				<div class="form-group">
+<<<<<<< HEAD
 					<div class="col-sm-offset-2 col-sm-10">
+=======
+					<div class="col-xs-offset-2 col-xs-10">
+>>>>>>> origin/master
 					  <button type="submit" class="btn btn-default" value="ok_meta" name="submit">Send</button>
 					</div>
 				</div>

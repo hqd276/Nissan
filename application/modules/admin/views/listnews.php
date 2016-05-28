@@ -1,4 +1,4 @@
-<div class="contact-form col-sm-12 bg-white">
+<div class="contact-form col-xs-12 bg-white">
 	<h2 class="text-uppercase">List News</h2>
 	<a href="<?php echo base_url('/admin/news/add/'.$type)?>" class="btn btn-default pull-right"> Add new News </a>
 	
